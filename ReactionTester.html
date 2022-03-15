@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Simon Zerisenay Online Library</title>
+    <link rel="stylesheet" href="home-style.css">
+    <!-- Bootstrap JS, jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap  CSS CDN  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+    <!-- Font-Awesome cdn -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+     <!-- Smartsupp Live Chat script -->
+<!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+  var _smartsupp = _smartsupp || {};
+  _smartsupp.key = 'a0ac4fcef9a6eae5051413bb4c7485665bfa4666';
+  window.smartsupp||(function(d) {
+    var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+    s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+    c.type='text/javascript';c.charset='utf-8';c.async=true;
+    c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+  })(document);
+  </script>
+    <style type="text/css">
+      body{
+
+        background-color: #BFC9CA ;
+    }
+    @font-face {
+      font-family:"Bovino" ;
+      src: url("font/Bovino-Regular.otf");
+    }
+    h1{
+      font-family: "Bovino";
+
+    }
+      /* theme color */
+      body{
+      transition: background 0.4s linear;
+      
+    }
+    body.dark {
+      background: #000000;
+
+
+    }
+    body.dark h1{
+      color: white;
+    }
+    body.dark p{
+      color: white;
+    }
+    nav{
+      transition: background 0.4s linear;
+    }
+    body.dark nav{
+      background-color: black;
+    }
+    footer{
+      transition: background 0.4s linear;
+    }
+    body.dark footer{
+      background-color: black;
+    }
+  
+    /* body.dark nav a{
+      color:white;
+
+    } */
+    .checkbox{
+      opacity: 0;
+      position: absolute;
+
+    }
+    .togglers{
+      margin-top: 5px;
+    }
+   
+    .togglers label{
+     
+      align-items: center;
+      border-radius: 50px;
+      position: relative;
+      justify-content: space-between; 
+      background-color: #111;
+      padding: 5px;
+      display:flex;
+      width: 50px;
+      height: 26px;
+      transform: scale(1.1);
+    }
+    .ball{ 
+      border-radius: 50%;
+      background-color: #fff;
+      position: absolute;
+      top:2px;
+      left:2px;
+      width: 22px;
+      height: 22px;
+      transition: transform 0.2s linear;
+
+    }
+    .fa-moon{
+      color: #f1c40f;
+    }
+    .fa-sun{
+      color: #f39c12;
+    }
+    .checkbox:checked + .label .ball {
+        transform: translateX(24px);
+    }
+    </style>
+    
+
+
+</head>
+
+<body>
+     <!-- Navigation -->
+  <section id="nav-bar">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="http://simonzerisenay-com.stackstaging.com/Simon/SimonZerisenayProWebsite.html"><img
+          src="Sizerlogo.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="Home.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Blogs.html">BLOGS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Contacts.html">CONTACTS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="AboutUs.html">ABOUT US</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              READINGS
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="Books.html">BOOKS</a>
+              <a class="dropdown-item" href="Megazine.html">MEGAZINE</a>
+              <a class="dropdown-item" href="Article.html">ARTICLE</a>
+              <a class="dropdown-item" href="Newspaper.html">NEWSAPAPER</a>
+
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              MORE
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="Games.html">GAMES</a>
+              <a class="dropdown-item" href="http://sizer-com.stackstaging.com/Simon/SWE.245/Wforecast.php">WEATHER
+                FORECAST</a>
+              <a class="dropdown-item" href="ReactionTester.html">REACTION TESTER</a>
+              <a class="dropdown-item" href="Videos.html">VIDEOS</a>
+              <a class="dropdown-item" href="http://sizer-com.stackstaging.com/Simon/SWE.245/SQL/">SECRET DIARY</a>
+              <a class="dropdown-item" href="Help.html">HELP</a>
+          <li class="nav-item">
+            <div class="signin">
+              <a href="http://sizer-com.stackstaging.com/Simon/mySQL/SIGNUP/index.php">
+
+                Logout
+
+              </a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="togglers">
+              <input type="checkbox" class="checkbox" id="checkbox">
+              <label for="checkbox" class="label">
+                <!-- <img src="/fontawesome/svgs/regular/sun.svg" alt=""> -->
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="ball"></div>
+              </label>
+
+            </div>
+          </li>
+          <script type="text/javascript">
+            const checkbox = document.getElementById('checkbox');
+            checkbox.addEventListener('change', () => {
+              //change the theme of the website
+              document.body.classList.toggle('dark');
+            })
+          </script>
+      </div>
+      </li>
+
+
+
+
+
+
+
+
+
+
+      </ul>
+
+      </div>
+    </nav>
+  </section>
+    <section>
+      
+      <div id="written">
+        <h1 id="Reaction"> Test Your Reaction </h1>
+        <p> Click on the boxes and circles as quickly as you can! </p>
+        <p class="bold">Your time: <span id = "timeTaken"></span></p>
+        </div> 
+         <div id = "shape"></div>   
+         <script type="text/javascript">
+         var start = new Date().getTime();
+         function getRandomColor() {
+            var letters = '0123456789ABCDEF'.split('');
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                 color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+    
+        }
+         function makeShapeAppear(){
+             var top = Math.random() * 200;
+             var left = Math.random()* 1050;
+             var width = Math.random() * 400;
+             if(Math.random() > 0.5){
+                 document.getElementById("shape").style.borderRadius = "50%";
+             }else{
+                 document.getElementById("shape").style.borderRadius = "0"
+             }
+             document.getElementById("shape").style.backgroundColor = getRandomColor();
+             document.getElementById("shape").style.width = width +"px";
+             document.getElementById("shape").style.height = width +"px";
+             document.getElementById("shape").style.top = top +"px";
+             document.getElementById("shape").style.left= left +"px";
+             document.getElementById("shape").style.display = "block";
+             start = new Date().getTime();
+    
+    
+         }
+         function appearAfterDelay(){
+            setTimeout(makeShapeAppear, Math.random() * 2000);
+         }
+         appearAfterDelay();
+         
+         document.getElementById("shape").onclick = function(){
+            document.getElementById("shape").style.display = "none";
+            var end = new Date().getTime();
+            var timeTaken = (end - start)/1000;
+            document.getElementById("timeTaken").innerHTML = timeTaken + "s";
+            appearAfterDelay();
+           
+         }
+        </script>  
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    </section>
+    
+</body>
+</html>

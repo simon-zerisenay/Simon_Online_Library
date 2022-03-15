@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Simon Zerisenay Online Library</title>
+    <link rel="stylesheet" href="home-style.css">
+    <!-- Bootstrap JS, jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap  CSS CDN  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+    <!-- Font-Awesome cdn -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        /* body {
+            background-color: bisque;
+        } */
+          /* theme color */
+    body{
+      transition: background 0.4s linear;
+      background-color: bisque;
+    }
+    body.dark {
+      background: #000000;
+
+
+    }
+    nav{
+      transition: background 0.4s linear;
+    }
+    body.dark nav{
+        background-color: black;
+    }
+    body.dark ul{
+      background-color: black;
+    }
+    li{
+        transition: background 0.4s linear;
+    }
+    body.dark li{
+        color:white;
+    }
+    footer{
+      transition: background 0.4s linear;
+    }
+    body.dark footer{
+      background-color: black;
+    }
+    body.dark p{
+        color: white;
+    }
+    body.dark h4{
+        color: white;
+
+    }
+    body.dark h5{
+        color: white;
+
+    }
+    body.dark h1{
+        color: white;
+    }
+    body.dark h3{
+        color:white;
+    }
+    
+
+  
+    /* body.dark nav a{
+      color:white;
+
+    } */
+    .checkbox{
+      opacity: 0;
+      position: absolute;
+
+    }
+    .togglers{
+      margin-top: 5px;
+    }
+   
+    .togglers label{
+     
+      align-items: center;
+      border-radius: 50px;
+      position: relative;
+      justify-content: space-between; 
+      background-color: #111;
+      padding: 5px;
+      display:flex;
+      width: 50px;
+      height: 26px;
+      transform: scale(1.1);
+    }
+    .ball{ 
+      border-radius: 50%;
+      background-color: #fff;
+      position: absolute;
+      top:2px;
+      left:2px;
+      width: 22px;
+      height: 22px;
+      transition: transform 0.2s linear;
+
+    }
+    .fa-moon{
+      color: #f1c40f;
+    }
+    .fa-sun{
+      color: #f39c12;
+    }
+    .checkbox:checked + .label .ball {
+        transform: translateX(24px);
+    }
+
+        .container h1 {
+            text-align: center;
+            text-decoration: underline;
+            box-shadow: gray;
+        }
+
+        .container h3 {
+            text-align: center;
+            margin-bottom: 3%;
+            text-decoration: underline;
+        }
+
+        .container h4 {
+            text-align: center;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        ul.breadcrumb {
+            padding: 10px 16px;
+            list-style: none;
+            background-color: #FFE4C4;
+        }
+
+        ul.breadcrumb li {
+            display: inline;
+            font-size: 18px;
+        }
+
+        ul.breadcrumb li+li:before {
+            padding: 8px;
+            color: black;
+            content: "/\00a0";
+        }
+
+        ul.breadcrumb li a {
+            color: #0275d8;
+            text-decoration: none;
+        }
+
+        ul.breadcrumb li a:hover {
+            color: #01447e;
+            text-decoration: underline;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+     <!-- Navigation -->
+  <section id="nav-bar">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="http://simonzerisenay-com.stackstaging.com/Simon/SimonZerisenayProWebsite.html"><img
+          src="Sizerlogo.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="Home.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Blogs.html">BLOGS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Contacts.html">CONTACTS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="AboutUs.html">ABOUT US</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              READINGS
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="Books.html">BOOKS</a>
+              <a class="dropdown-item" href="Megazine.html">MEGAZINE</a>
+              <a class="dropdown-item" href="Article.html">ARTICLE</a>
+              <a class="dropdown-item" href="Newspaper.html">NEWSAPAPER</a>
+
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              MORE
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="Games.html">GAMES</a>
+              <a class="dropdown-item" href="http://sizer-com.stackstaging.com/Simon/SWE.245/Wforecast.php">WEATHER
+                FORECAST</a>
+              <a class="dropdown-item" href="ReactionTester.html">REACTION TESTER</a>
+              <a class="dropdown-item" href="Videos.html">VIDEOS</a>
+              <a class="dropdown-item" href="http://sizer-com.stackstaging.com/Simon/SWE.245/SQL/">SECRET DIARY</a>
+              <a class="dropdown-item" href="Help.html">HELP</a>
+          <li class="nav-item">
+            <div class="signin">
+              <a href="http://sizer-com.stackstaging.com/Simon/mySQL/SIGNUP/index.php">
+
+                Logout
+
+              </a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="togglers">
+              <input type="checkbox" class="checkbox" id="checkbox">
+              <label for="checkbox" class="label">
+                <!-- <img src="/fontawesome/svgs/regular/sun.svg" alt=""> -->
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="ball"></div>
+              </label>
+
+            </div>
+          </li>
+          <script type="text/javascript">
+            const checkbox = document.getElementById('checkbox');
+            checkbox.addEventListener('change', () => {
+              //change the theme of the website
+              document.body.classList.toggle('dark');
+            })
+          </script>
+      </div>
+      </li>
+
+
+
+
+
+
+
+
+
+
+      </ul>
+
+      </div>
+    </nav>
+  
+        <ul class="breadcrumb">
+            <li>More</li>
+            <li><a href="Article.html">Articles</a></li>
+
+            <li>The negative impacts of Tobacco Production and Consumption</li>
+        </ul>
+
+    </section>
+    <section>
+        <div class="container">
+
+            <h1 style="font-family: fantasy;">The negative impacts of Tobacco Production and Consumption</h1>
+
+
+            <h3>Mr. Simon Zerisenay Ghebremeskel </h3>
+
+            <p>
+                According to the world health organization (2019), “Tobacco kills more than 8 million people each year.
+                More than 7 million of those deaths are the result of direct tobacco use while approximately 1.2 million
+                are the result of non-smokers being exposed to second-hand smoke.” That means around 20,000 people are
+                dying as a result of diseases caused by tobacco production and consumption every day. Tobacco is one of
+                the highly grown plants in the world, as it is the chief ingredient of cigarettes, pipes such as shishas
+                and dukkha, chewing tobacco, dipping tobacco, snus, and snuff. These listed products which are forms of
+                tobacco have been used as the daily routine of many people. This is due to its key component which is
+                called nicotine. Nicotine is a chemical that gives a pleasant feeling only for a short period. It is
+                believed that nicotine, which is a key component of tobacco, is the one that is causing people to be
+                attracted by these harmful additives. Myers (2019) claims that every day 80,000 to 100,000 people become
+                addicted. Taking tobacco is seen by people as a remedy for a person having temporary stress as it gives
+                good feelings for a short time, due to the presence of nicotine. Moreover, the majority of people that
+                start taking tobacco in the form of smoking are at the age below 20, as they are influenced by peer
+                pressure. According to Laporte (2013), approximately 7.44 million metric tons of tobacco leaf was
+                produced in 2013. This amount after being processed was taken nearly by one billion people in different
+                forms mostly by smoking (Miller, 2017). These high rates of production and consumption of tobacco cause
+                harm to the producers, users and the environment. Thus, the world health organization, collaboratively
+                with all of the governments in the world should work on diminishing the number of tobacco products into
+                lowest possible levels, and consumers have to reduce the consumption rate of tobacco in different forms
+                as it has numerous negative impacts on the environment, human beings as well as on the economy.
+            </p>
+            <p>
+                The first reason that tobacco production and consumption must be reduced is its negative effects on the
+                environment. As the number of smokers is increasing from time to time, the industries producing tobacco,
+                which is the main ingredient of cigarettes, are also increasing and expanding throughout the world.
+                Tobacco production causes deforestation as most of the tobacco-producing industries prefer forests to
+                vegetational land since forest lands are virgin, rich in humus and animal manure. According to Geist
+                (1999), “An estimated 200,000 ha of forests/woodlands are removed by tobacco farming each year.”
+                Moreover, the tobacco-producing companies are cutting forests for tobacco wrapping and curing, which is
+                also increasing the deforestation rate. After the tobacco plant is grown it needs drying before entering
+                to the processing part, this is done by burning wood for as long as seven days. Moreover, the paper used
+                to wrap the tobacco to form cigarettes and the package needs wood, this also contributes to
+                deforestation. According to Hilderman (2010), not only affects the climate by increasing the atmospheric
+                level of carbon dioxide, which latter results in climate imbalance, but also it indirectly affects the
+                environment by inhibiting water recycling, as the existence of trees is the main factor that causes
+                rain. It also triggers severe flooding as there are no trees to prevent sediment runoffs and no forests
+                to hold more water than farms or grasslands. Besides, deforestation results in soil erosion, winds or
+                rain take the topsoil to the river and rocks this results in soil erosion. Wildlife extinction is also
+                one of the major environmental impacts caused by tobacco production as a result of deforestation.
+                Forests provide habitats for over 80% of plants and animals that live inland, but deforestation destroys
+                these habitats diminishing biodiversity. Secondly, Tobacco growing usually involves substantial use of
+                chemicals – including pesticides, fertilizers and growth regulators. These chemicals affect drinking
+                water sources as a result of runoff from tobacco-growing areas (Novotny, 2015). Moreover, tobacco in the
+                form of cigarettes contains hazardous substances like arsenic, lead, nicotine and ethyl phenol. The
+                substances leached from the discarded butts enter to the aquatic environment and soil (Novotny, 2015).
+                The chemicals toxify the soil and the water bodies to cause death to both aquatic and terrestrial
+                animals. Therefore, we can conclude from this that tobacco production and consumption are highly toxic
+                to the environment as they cause deforestation which is the reason for many kinds of environmental
+                devastations that are happening nowadays, and affects the soil and water bodies when trashed as it
+                contains hazardous substances.
+            </p>
+
+
+            <p> The second reason why tobacco production and consumption must be reduced is due to its harmful negative
+                effects on human beings, resulting in health problems and violating human rights. All forms of tobacco
+                have harmful effects on health including cigars, pipes and smokeless tobacco such as chewing tobacco
+                snuff. According to (World Health Organization, 2002), approximately one billion men and 250 million
+                women are daily smokers, and 8 million people die yearly from these smokers, which is making smoking a
+                major cause of death yearly. O’Connor (2013) claims that smoking for long period takes away 10 years of
+                a person’s life. The main components of tobacco in cigarettes are nicotine, tar, and carbon monoxide.
+                Nicotine is harmful as it leads to withdrawal syndrome, which is the inability to concentrate, and
+                depressed mood. Tar contains carcinogens which can lead to cancer, if used in large amounts it blocks
+                the alveoli. Carbon monoxide prevents the hemoglobin of the red blood cells from transporting oxygen to
+                our body cells and this can cause a shortness of breath. The harmful gasses such as silicates are also
+                harmful to our respiratory system. Tobacco is hazardous to human beings as it is the cause for the most
+                dangerous diseases in the world such as different kinds of heart problems, respiratory problems, cancer,
+                emphysema, SIDS, bad breath, periodontitis, and premature aging. According to the article “Toll of
+                Tobacco in the United States” (2019), tobacco in the form of cigarettes kills 480,000 people in the US,
+                which means tobacco kills more people than alcohol, car accidents, illegal drugs, murders, and suicides
+                yearly. According to Ramos (2018), not only the consumption but also tobacco production causes health
+                problems, as a recent study of farmworkers in North Carolina found that the tobacco farmworkers had
+                higher levels of nicotine than the actual smokers. The world health organization (2019) explained that
+                nicotine is injected into their body by their skin when harvesting the wet tobacco and it makes them
+                feel sick, such kind of sickness is called Green tobacco sickness. This kind of illness results in
+                nicotine addiction and different kinds of withdrawal syndromes including depressed mood, insomnia,
+                irritability and difficulty concentrating (Ramos, 2018). Moreover, tobacco production and consumption
+                are public health issues with human rights implications (Ramos, 2018). The article “Child Labor in
+                Global Tobacco Production: A Human Right Approach to an Enduring Dilemma”,(2018) describes the global
+                tobacco giants such as Philip Morris, British American tobacco and imperial tobacco, through a complex
+                supply system, engage the labor of children, throughout the world to extremely dangerous environments,
+                which has both immediate and long-term consequences for the children being employed and for society.
+                Children when working in farms face different kinds of hazardous exposures, such as working long hours,
+                chemicals, heavy lifting, lacerations and piercing from equipment and extreme weather conditions (Ramos,
+                2018). Thus, tobacco production is causing health problems and violations of human rights. Therefore, we
+                have to reduce the rate at which tobacco is produced and consumed as it results in many kinds of health
+                complications and human right violation in root production places.
+            </p>
+            <p>
+
+                One reason that we must reduce the rate at which tobacco is produced and consumed is its negative impact
+                on the economy of consumers and governmental health care centers. According to the World health
+                organization (2019), More than 80% of all tobacco consumers, which means smokers, live in low- and
+                middle-income countries. Indeed, The World Health Organization (2019) claims that Tobacco use results in
+                poverty by redirecting household spending from basic needs such as shelter, food to tobacco products
+                such as cigarettes, snus, and chewing tobacco. The tobacco users living in low-income countries spend a
+                considerable percentage of their income on smoking (Rueger, 2013). For example, if a person smokes one
+                pack a day, which is the average intake of smokers, he/she spends approximately 12,000 US dollars for 5
+                years. For people living in low-income countries, this amount is 80% of their 5 years total income
+                (“World health organization”, 2019). Moreover, the main financial problem that the users face is the
+                money spent on the treatment of the diseases that arise as a result of tobacco consumption. According to
+                Ekpu & Brown (2015), About 15% of the aggregate health care expenditure in high-income countries can be
+                attributed to smoking. For instance, In the US, the proportion of health care expenditure attributable
+                to smoking ranges between 6% to 18% across different states and in the UK, the direct costs of smoking
+                to the national health care service have been estimated at between £2.7 billion and £5.2 billion, which
+                is equivalent to around 5% of the total National Health Service budget each year (Ekpu & Brown, 2015).
+                Thus, according to these listed statistical facts and reasons, we can conclude that tobacco consumption
+                can result in financial problems to its users.
+            </p>
+
+            <h5> Conclusion</h5>
+            <p>
+                In conclusion, Consumers should help the government and World Health Organization to scale down the
+                production and consumption rate of tobacco, as it is negatively affecting us, our environment and our
+                Economy. Consumers are the first people that should be addressed, as they are the ones who determine the
+                rate of tobacco production. The overproduction of tobacco can result in deforestation which can later
+                lead to environmental destruction. Moreover, the toxic chemicals found in cigarettes are the cause of
+                soil, water, and Air pollution. Moreover, Tobacco production and consumption are causing Human beings to
+                face different kinds of serious health complications including lung problems, heart-related problems,
+                and cancer, those problems latter results in death. Besides, tobacco consumption can result in financial
+                problems to its users, as the majority of the consumers are from low- and middle-income countries.
+                Tobacco consumers also spent money on treatment from tobacco-related diseases. The article “The Tobacco
+                Atlas”, (n.d.) describes that approximately 5.7 trillion cigarettes were smoked worldwide in 2016.
+                Despite the overall consumption has reduced slightly over the recent years, the future path of global
+                tobacco production and consumption control is still uncertain (“The tobacco atlas”, n.d.). Some
+                techniques have been implemented on the ground to reduce the consumption rate of tobacco such as
+                increasing smoke-free places by distributing “smoking prohibitive signs” all over the world, and giving
+                the exact amount of nicotine to the consumers to help them and those who are exposed to secondhand
+                smoke, to escape from the harmful gases. These techniques are believed to diminish the production and
+                consumption rate of tobacco. As Doctor Gro Harlem Brundtland, the former director-general of the world
+                health organization said, “A cigarette is the only consumer product which when used as directed kills
+                its consumer.”, tobacco consumers should know that they are buying weapons that are designed to program
+                them and shorten their life when buying tobacco products.
+            </p>
+
+
+
+            <h4> References</h4>
+
+
+            <p>
+                Alux.com. (2018, April 25). Retrieved October 30, 2019, from https://www.youtube.com/watch?v=zdbM4NSvL30 
+            </p>
+
+            <p>
+                Eijk, Y. van der, Bialous, S. A., & Glantz, S. (2018, May 1). The Tobacco Industry and Children’s Rights, Retrieved from https://pediatrics.aappublications.org/content/141/5/e20174106 
+            </p>
+
+            <p>
+                Ekpu, V. U., & Brown, A. K. (2015, July 14). The Economic Impact of Smoking and Reducing Smoking Prevalence: Review of Evidence. Retrieved from https://www.ncbi.nlm.nih.gov/pubmed/26242225 
+            </p>
+
+            <p>
+
+                Geist, H. J. (1999). Global assessment of deforestation related to tobacco farming. Tobacco Control, 8(1), 18-28. doi: 10.1136/tc.8.1.18 
+            </p>
+
+            <p>
+
+                Global tobacco production 2017. (n.d.). Retrieved from https://www.statista.com/statistics/261189/global-tobacco-production-since-1980/.  
+            </p>
+
+            <p>
+                Hilderman, R. (2010, December 27). The Effect of Deforestation on the Climate and Environment - Understanding Climate Change Blog. Retrieved from https://www.motherearthnews.com/nature-and-environment/the-effect-of-deforestation-on-the-climate-and-environment. 
+
+            </p>
+            <p>
+                Kumar, A., Bhartiya, D., Kaur, J., Kumari, S., Singh, H., Saraf, D., … Mehrotra, R. (2018). Regulation of toxic contents of smokeless tobacco products. Indian Journal of Medical Research, 148(1), 14–24. https://doi.org/10.4103/ijmr.IJMR_2025_17 
+
+            </p>
+            <p>
+
+                Media, N. M. (2012, July 20). Retrieved October 30, 2019, from https://www.youtube.com/watch?v=gwuwrRK-I2Y&t=199s   
+
+            </p>
+
+            <p>
+                Miller, S. G. (2017, April 5). There Are Nearly 1 Billion Smokers on Earth. Retrieved from https://www.livescience.com/58563-one-billion-smokers.html. 
+            </p>
+            <p>
+                Myers, M. L. (2019, August 20). You're the Target. Retrieved from https://www.tobaccofreekids.org/what-we-do/industry-watch/stop-marlboro. 
+            </p>
+
+            <p>
+                Novotny, T. E., Bialous, S. A., Burt, L., Curtis, C., Costa, V. L. D., Iqtidar, S. U., … Despaignet, E. T. (2015). The environmental and health impacts of tobacco agriculture, cigarette manufacture and consumption. Bulletin of the World Health Organization, 93(12), 877-880. doi: 10.2471/blt.15.152744
+            </p>
+            <p>
+                O’Connor, A. (2013, January 23). Putting a Number on Smoking's Toll. Retrieved from https://well.blogs.nytimes.com/2013/01/23/putting-a-number-to-smokings-toll/. 
+            </p>
+            <p>
+                Ramos A. K. (2018). Child Labor in Global Tobacco Production: A Human Right Approach to an Enduring Dilemma. Health and human rights, 20(2), 235-248 
+            </p>
+            <p>
+                Rueger, H., Weishaar, H., Ochsmann, E. B., Letzel, S., & Muenster, E. (2013). Factors associated with self-assessed increase in tobacco consumption among over-indebted individuals in Germany: a cross-sectional study. Substance Abuse Treatment, Prevention & Policy, 8, 1–8. https://doi.org/10.1186/1747-597X-8-12 
+            </p>
+            <p>
+                Shaw, M., Mitchell, R., & Dorling, D. (2000, January 1). Time for a smoke? One cigarette reduces your life by 11 minutes. Retrieved from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1117323/. 
+            </p>
+            <p>
+                The tobacco Atlas. (n.d.). Retrieved from https://tobaccoatlas.org/topic/consumption/ 
+            </p>
+            <p>
+                Tobacco. (2019, July 26). Retrieved November 8, 2019, from https://www.who.int/news-room/fact-sheets/detail/tobacco.
+            </p>
+
+            <br>
+            <br><br><br>
+
+
+
+
+
+
+        </div>
+    </section>
+    <footer>
+        <div class="main-content">
+          <div class="left box">
+            <h2>About us</h2>
+            <div class="content">
+              <p>
+                This online library as well as bookstore is created to nurture the reading lust of all people especially
+              readers in an easy and fun way. Moreover, you can buy books, articles, magazines as well as newspapers of
+              different types published from all over the world. Our motive is to build a reading community with creative
+              mind, prudent way of thinking, Positive and learning mindsets.
+              </p>
+              <div class="social">
+                <a href="#"><span class="fab fa-facebook-f"></span></a>
+                <a href="#"><span class="fab fa-twitter"></span></a>
+                <a href="#"><span class="fab fa-instagram"></span></a>
+                <a href="#"><span class="fab fa-youtube"></span></a>
+                <a href="#"><span class="fab fa-linkedin"></span></a>
+                <a href="#"><span class="fab fa-pinterest"></span></a>
+              </div>
+            
+            </div>
+          </div>
+          <div class="center box">
+            <h2>Address</h2>
+            <div class="content">
+              <div class="place">
+                <a href="https://goo.gl/maps/6Q4XGAHgLy64LvAj9"><span class="fas fa-map-marker-alt"></span></a>
+                <span class="text"> United Arab Emirates, Abu Dhabi</span>
+              </div>
+              <div class="phone">
+                <span class="fas fa-phone-alt"></span>
+                <span class="text">+971-545-305-388</span>
+              </div>
+              <div class="email">
+                <span class="fas fa-envelope"></span>
+                <span class="text">simonzerisenay@gmail.com</span>
+              </div>
+            </div>
+    
+          </div>
+          <div class="right box">
+            <h2> Contact us</h2>
+            <div class="content">
+              <form action="#">
+                <div class="email">
+                  <div class="text">Email *</div>
+                  <input type="email" required>
+                </div>
+                <div class="msg">
+                  <div class="text"> Message *</div>
+                  <textarea cols="25" rows="2" required></textarea>
+    
+                </div>
+                <div class="btn">
+                  <button class="Sbtn" type="submit">Send</button>
+                </div>
+    
+              </form>
+    
+            </div>
+    
+          </div>
+          
+       
+    
+    
+        </div>
+     
+    
+        
+      </footer>
+</body>
+
+</html>

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Simon Zerisenay Online Library</title>
+  <link rel="stylesheet" href="home-style.css">
+  <!-- Bootstrap JS, jquery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <!-- Bootstrap  CSS CDN  -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+
+  <!-- Font-Awesome cdn -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Yeseva+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+ <!-- Smartsupp Live Chat script -->
+<!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+  var _smartsupp = _smartsupp || {};
+  _smartsupp.key = 'a0ac4fcef9a6eae5051413bb4c7485665bfa4666';
+  window.smartsupp||(function(d) {
+    var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+    s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+    c.type='text/javascript';c.charset='utf-8';c.async=true;
+    c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+  })(document);
+  </script>
+<!-- JQUERY ui -->
+  <link rel="stylesheet" href="/jquery-ui/jquery-ui-1.12.1/jquery-ui.css">
+  <link rel="stylesheet" href="/jquery-ui/jquery-ui-1.12.1/jquery-ui.structure.css">
+  <link rel="stylesheet" href="/jquery-ui/jquery-ui-1.12.1/jquery-ui.theme.css">
+  <style type="text/css">
+   
+      /* theme color */
+      body{
+      transition: background 0.4s linear;
+      font-family: sans-serif;
+      font-weight: bolder;
+      /* background-color: #8392a1; */
+    background-color: #D5F5E3;
+    }
+    body.dark {
+      background: #000000;
+      color: white;
+      /* transition: background 0.4s linear; */
+
+
+    }
+    nav{
+      transition: background 0.4s linear;
+    }
+    body.dark nav{
+      background-color: black;
+    }
+    /* p{
+      transition: background 0.4s linear;
+
+    }
+    body.dark p{
+      background-color: white;
+    } */
+    /* h2{
+      transition: background 0.4s linear;
+    }
+    body.dark h2{
+      background-color: white;
+    } */
+    /* h1{
+      transition: background 0.4s linear;
+    }
+    body.dark h1{
+      background-color: white;
+    } */
+
+    footer{
+      transition: background 0.4s linear;
+    }
+    body.dark footer{
+      background-color: black;
+    }
+  
+    /* body.dark nav a{
+      color:white;
+
+    } */
+    .checkbox{
+      opacity: 0;
+      position: absolute;
+
+    }
+    .togglers{
+      margin-top: 5px;
+    }
+   
+    .togglers label{
+     
+      align-items: center;
+      border-radius: 50px;
+      position: relative;
+      justify-content: space-between; 
+      background-color: #111;
+      padding: 5px;
+      display:flex;
+      width: 50px;
+      height: 26px;
+      transform: scale(1.1);
+    }
+    .ball{ 
+      border-radius: 50%;
+      background-color: #fff;
+      position: absolute;
+      top:2px;
+      left:2px;
+      width: 22px;
+      height: 22px;
+      transition: transform 0.2s linear;
+
+    }
+    .fa-moon{
+      color: #f1c40f;
+    }
+    .fa-sun{
+      color: #f39c12;
+    }
+    .checkbox:checked + .label .ball {
+        transform: translateX(24px);
+    }
+
+    .team-section {
+      overflow: hidden;
+      text-align: center;
+    
+      padding: 60px;
+    } 
+
+    .team-section h1 {
+      text-transform: uppercase;
+      margin-bottom: 60px;
+      /* color: white; */
+      font-size: 40px;
+
+    }
+
+    .border {
+      display: block;
+      margin: auto;
+      width: 160px;
+      height: 3px;
+      /* background-color: #3498db; */
+      margin-bottom: 40px;
+
+    }
+
+    .ps {
+      margin-bottom: 40px;
+
+    }
+
+    .ps a {
+      display: inline-block;
+      margin: 0 30px;
+      width: 200px;
+      height: 260px;
+      overflow: hidden;
+      border-radius: 100%;
+    }
+
+    .ps a img {
+      width: 100%;
+      filter: grayscale(100%);
+      transition: 0.4s all;
+    }
+
+    .ps a:hover>img {
+      filter: none;
+    }
+
+    .name {
+      font-size: 20px;
+      /* color: white; */
+    }
+
+    .section {
+      width: 600px;
+      margin: auto;
+      font-size: 20px;
+      /* color: white; */
+      text-align: justify;
+
+
+    }
+
+
+
+    .name {
+      display: block;
+      margin-bottom: 30px;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 22px;
+    }
+  </style>
+
+
+
+
+</head>
+
+<body>
+  <!-- Navigation -->
+  <section id="nav-bar">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="http://simonzerisenay-com.stackstaging.com/Simon/SimonZerisenayProWebsite.html"><img
+          src="Sizerlogo.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="Home.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Blogs.html">BLOGS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Contacts.html">CONTACTS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="AboutUs.html">ABOUT US</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              READINGS
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="Books.html">BOOKS</a>
+              <a class="dropdown-item" href="Megazine.html">MEGAZINE</a>
+              <a class="dropdown-item" href="Article.html">ARTICLE</a>
+              <a class="dropdown-item" href="Newspaper.html">NEWSAPAPER</a>
+             
+      </div>
+      </li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              MORE
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="Games.html">GAMES</a>
+              <a class="dropdown-item" href="http://sizer-com.stackstaging.com/Simon/SWE.245/Wforecast.php">WEATHER
+                FORECAST</a>
+              <a class="dropdown-item" href="ReactionTester.html">REACTION TESTER</a>
+              <a class="dropdown-item" href="Videos.html">VIDEOS</a>
+              <a class="dropdown-item" href="http://sizer-com.stackstaging.com/Simon/SWE.245/SQL/">SECRET DIARY</a>
+              <a class="dropdown-item" href="Help.html">HELP</a>
+          <li class="nav-item">
+            <div class="signin">
+              <a href="http://sizer-com.stackstaging.com/Simon/mySQL/SIGNUP/index.php">
+
+                Logout
+
+              </a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="togglers">
+              <input type="checkbox" class="checkbox" id="checkbox">
+              <label for="checkbox" class="label">
+                <!-- <img src="/fontawesome/svgs/regular/sun.svg" alt=""> -->
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="ball"></div>
+              </label>
+
+            </div>
+          </li>
+          <script type="text/javascript">
+            const checkbox = document.getElementById('checkbox');
+            checkbox.addEventListener('change', () => {
+              //change the theme of the website
+              document.body.classList.toggle('dark');
+            })
+          </script>
+      </div>
+      </li>
+      
+
+    
+
+
+
+
+
+
+      
+      </ul>
+
+      </div>
+    </nav>
+  </section>
+  <section>
+    <div class="team-section">
+      <h1 style="font-family: 'Berkshire Swash', cursive;">About Us</h1>
+      <span class="border"></span>
+      <div class="ps">
+        <a href="#p1" id="img1"><img src="team2.jpg"  alt=""></a>
+        <a href="http://simonzerisenay-com.stackstaging.com/Simon/SimonZerisenayProWebsite.html" id="img2"><img src="teamad.jpg" alt=""></a>
+        <a href="#p3" id="img3"><img src="team5.jpg"  alt=""></a>
+      </div>
+      <div class="section" id="p1">
+        <span class="name"> Simon Zerisenay </span>
+        <span class="border"></span>
+        <p>This online library as well as bookstore is created to nurture the reading lust of all people especially
+          readers in an easy and fun way. Moreover, you can buy books, articles, magazines as well as newspapers of
+          different types published from all over the world. Our motive is to build a reading community with creative
+          mind, prudent way of thinking, Positive and learning mindsets. </p>
+      </div>
+
+
+    </div>
+
+
+
+
+
+  </section>
+  <footer>
+    <div class="main-content">
+      <div class="left box">
+        <h2>About us</h2>
+        <div class="content">
+          <p>
+            This online library as well as bookstore is created to nurture the reading lust of all people especially
+            readers in an easy and fun way. Moreover, you can buy books, articles, magazines as well as newspapers of
+            different types published from all over the world. Our motive is to build a reading community with creative
+            mind, prudent way of thinking, Positive and learning mindsets.
+          </p>
+          <div class="social">
+            <a href="#"><span class="fab fa-facebook-f"></span></a>
+            <a href="#"><span class="fab fa-twitter"></span></a>
+            <a href="#"><span class="fab fa-instagram"></span></a>
+            <a href="#"><span class="fab fa-youtube"></span></a>
+            <a href="#"><span class="fab fa-linkedin"></span></a>
+            <a href="#"><span class="fab fa-pinterest"></span></a>
+          </div>
+        
+        </div>
+      </div>
+      <div class="center box">
+        <h2>Address</h2>
+        <div class="content">
+          <div class="place">
+            <a href="https://goo.gl/maps/6Q4XGAHgLy64LvAj9"><span class="fas fa-map-marker-alt"></span></a>
+            <span class="text"> United Arab Emirates, Abu Dhabi</span>
+          </div>
+          <div class="phone">
+            <span class="fas fa-phone-alt"></span>
+            <span class="text">+971-545-305-388</span>
+          </div>
+          <div class="email">
+            <span class="fas fa-envelope"></span>
+            <span class="text">simonzerisenay@gmail.com</span>
+          </div>
+        </div>
+
+      </div>
+      <div class="right box">
+        <h2> Contact us</h2>
+        <div class="content">
+          <form action="#">
+            <div class="email">
+              <div class="text">Email *</div>
+              <input type="email" required>
+            </div>
+            <div class="msg">
+              <div class="text"> Message *</div>
+              <textarea cols="25" rows="2" required></textarea>
+
+            </div>
+            <div class="btn">
+              <button class="Sbtn" type="submit">Send</button>
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+      
+   
+
+
+    </div>
+ 
+
+    
+  </footer>
+
+</body>
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="jquery-ui/jquery-ui-1.12.1/jquery-ui.js"></script> <!-- it should be placed below it because it is build on top of it  -->
+<script>
+    $("#img1").tooltip({
+
+        
+        content: "RAHEL ZERISENAY",
+        show:{effect:"highlight", duration:2000},// in this effect if you are using bounce it will bounce, pulsate (ውልዕ ትፍአ) and highlight it will first highlight and then fade, explode it will be assembled but if u are using this effect track must be offf, blind also
+        hide:{effect:"explode", duration:1000}
+    });
+    ript>
+    $("#img2").tooltip({
+
+        
+        content: "SIMON ZERISENAY",
+        show:{effect:"highlight", duration:2000},// in this effect if you are using bounce it will bounce, pulsate (ውልዕ ትፍአ) and highlight it will first highlight and then fade, explode it will be assembled but if u are using this effect track must be offf, blind also
+        hide:{effect:"explode", duration:1000}
+    });
+    
+    ript>
+    $("#img3").tooltip({
+
+        
+        content: "YOSIEF ZERISENAY",
+        show:{effect:"highlight", duration:2000},// in this effect if you are using bounce it will bounce, pulsate (ውልዕ ትፍአ) and highlight it will first highlight and then fade, explode it will be assembled but if u are using this effect track must be offf, blind also
+        hide:{effect:"explode", duration:1000}
+    });
+    
+    
+</script>
+
+</html>

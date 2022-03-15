@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Simon Zerisenay Online Library</title>
+    <link rel="stylesheet" href="home-style.css">
+    <!-- Bootstrap JS, jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap  CSS CDN  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+    <!-- Font-Awesome cdn -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        body {
+            background-color: bisque;
+        }
+        body{
+      transition: background 0.4s linear;
+      background-color: bisque;
+    }
+    body.dark {
+      background: #000000;
+
+
+    }
+    nav{
+      transition: background 0.4s linear;
+    }
+    body.dark nav{
+        background-color: black;
+    }
+    body.dark ul{
+      background-color: black;
+    }
+    li{
+        transition: background 0.4s linear;
+    }
+    body.dark li{
+        color:white;
+    }
+    footer{
+      transition: background 0.4s linear;
+    }
+    body.dark footer{
+      background-color: black;
+    }
+    body.dark p{
+        color: white;
+    }
+    body.dark h4{
+        color: white;
+
+    }
+    body.dark h5{
+        color: white;
+
+    }
+    body.dark h1{
+        color: white;
+    }
+    body.dark h3{
+        color:white;
+    }
+    
+
+  
+    /* body.dark nav a{
+      color:white;
+
+    } */
+    .checkbox{
+      opacity: 0;
+      position: absolute;
+
+    }
+    .togglers{
+      margin-top: 5px;
+    }
+   
+    .togglers label{
+     
+      align-items: center;
+      border-radius: 50px;
+      position: relative;
+      justify-content: space-between; 
+      background-color: #111;
+      padding: 5px;
+      display:flex;
+      width: 50px;
+      height: 26px;
+      transform: scale(1.1);
+    }
+    .ball{ 
+      border-radius: 50%;
+      background-color: #fff;
+      position: absolute;
+      top:2px;
+      left:2px;
+      width: 22px;
+      height: 22px;
+      transition: transform 0.2s linear;
+
+    }
+    .fa-moon{
+      color: #f1c40f;
+    }
+    .fa-sun{
+      color: #f39c12;
+    }
+    .checkbox:checked + .label .ball {
+        transform: translateX(24px);
+    }
+
+        .container h1 {
+            text-align: center;
+            text-decoration: underline;
+            box-shadow: gray;
+        }
+
+        .container h3 {
+            text-align: center;
+            margin-bottom: 3%;
+            text-decoration: underline;
+        }
+
+        .container h4 {
+            text-align: center;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        /* .container h5{
+            text-decoration: underline;
+        } */
+
+        ul.breadcrumb {
+            padding: 10px 16px;
+            list-style: none;
+            background-color: #FFE4C4;
+        }
+
+        ul.breadcrumb li {
+            display: inline;
+            font-size: 18px;
+        }
+
+        ul.breadcrumb li+li:before {
+            padding: 8px;
+            color: black;
+            content: "/\00a0";
+        }
+
+        ul.breadcrumb li a {
+            color: #0275d8;
+            text-decoration: none;
+        }
+
+        ul.breadcrumb li a:hover {
+            color: #01447e;
+            text-decoration: underline;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <!-- Navigation -->
+  <section id="nav-bar">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="http://simonzerisenay-com.stackstaging.com/Simon/SimonZerisenayProWebsite.html"><img
+          src="Sizerlogo.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="Home.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Blogs.html">BLOGS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Contacts.html">CONTACTS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="AboutUs.html">ABOUT US</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              READINGS
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="Books.html">BOOKS</a>
+              <a class="dropdown-item" href="Megazine.html">MEGAZINE</a>
+              <a class="dropdown-item" href="Article.html">ARTICLE</a>
+              <a class="dropdown-item" href="Newspaper.html">NEWSAPAPER</a>
+             
+      </div>
+      </li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              MORE
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="Games.html">GAMES</a>
+              <a class="dropdown-item" href="http://sizer-com.stackstaging.com/Simon/SWE.245/Wforecast.php">WEATHER
+                FORECAST</a>
+              <a class="dropdown-item" href="ReactionTester.html">REACTION TESTER</a>
+              <a class="dropdown-item" href="Videos.html">VIDEOS</a>
+              <a class="dropdown-item" href="http://sizer-com.stackstaging.com/Simon/SWE.245/SQL/">SECRET DIARY</a>
+              <a class="dropdown-item" href="Help.html">HELP</a>
+          <li class="nav-item">
+            <div class="signin">
+              <a href="http://sizer-com.stackstaging.com/Simon/mySQL/SIGNUP/index.php">
+
+                Logout
+
+              </a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="togglers">
+              <input type="checkbox" class="checkbox" id="checkbox">
+              <label for="checkbox" class="label">
+                <!-- <img src="/fontawesome/svgs/regular/sun.svg" alt=""> -->
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="ball"></div>
+              </label>
+
+            </div>
+          </li>
+          <script type="text/javascript">
+            const checkbox = document.getElementById('checkbox');
+            checkbox.addEventListener('change', () => {
+              //change the theme of the website
+              document.body.classList.toggle('dark');
+            })
+          </script>
+      </div>
+      </li>
+      
+
+    
+
+
+
+
+
+
+      
+      </ul>
+
+      </div>
+    </nav>
+    <ul class="breadcrumb">
+        <li>More</li>
+        <li><a href="Article.html">Articles</a></li>
+
+        <li>Genetic Modification for Human Beings Should Not Be Allowed</li>
+    </ul>
+  </section>       
+
+
+    <section>
+        <div class="container">
+
+            <h1 style="font-family: fantasy;">Genetic Modification for Human Beings Should Not Be Allowed</h1>
+
+
+            <h3>Mr. Simon Zerisenay Ghebremeskel</h3>
+
+            <p>
+                Genetic modification is one of the outcomes of the disruptive biotechnological developments that our
+                world acquired through the study called genetic engineering in the recent few decades. Genetic
+                modification can be defined as a technique to change the characteristics of organisms especially,
+                animals and plants by making changes in their genetic makeup (Ross, 2019). It has been a long time since
+                Genetic modification started to be implemented on plant seeds successfully. Moreover, it has been an
+                important tool for enhancing world agriculture as it is used to treat plant seeds and improve their
+                qualitative and quantitative productivity. After Scientists saw the importance of genetic modification
+                or gene editing in plants and other micro-organisms, they came up with an idea that is to implement it
+                on human beings. Firstly, the idea was to use genetic modification to cure genetic disorders. As a
+                result of extensive studies and researches made by scientists, in 2012, the CRISPR cas9 technology was
+                found. The CRISPR cas9 is a powerful biotechnological tool used to design embryos in their early stage
+                (Vidyasagar, 2018). Moreover, it is said to be a supportive tool as it helps the doctors and genetic
+                engineers, who are using the tool, to easily spot and have full control to tune the different parts of
+                the gene selectively. But the world hasn’t stand fully with the scientists who were trying to introduce
+                CRISPR technology. According to Human Genetic Modification(n.d.), More than forty countries have either
+                discouraged or outright banned this methodology. There are several reasons that initiated almost all the
+                powerful countries to ban and to stand opposite to the development of the biotechnological tool, which
+                is CRISPR cas9, used in genetic modification of human embryos in early stages. But, nowadays some of the
+                technologically advanced countries including the United Kingdom and China licensed genetic modification
+                in human embryos. This made a big shock for other counties who are in a continued effort to disrupt the
+                development of this technology, as allowing it will fully affect biodiversity and result in social
+                problems. Thus, Governments, Organizations, and Scientists should work hand in hand to ban Genetic
+                modification for human beings as it has several negative aspects including Ethical issues, Risks and
+                Ineffectiveness, and Social problems.
+            </p>
+            <h5> Ethical Issues </h5>
+            <p>
+           
+            The first reason that genetic modification for humans should not be allowed is the ethical concerns it
+            raises including violating the rights of next-generation and interfering in the law of nature. Designing
+            Embryos which is one of the applications of genetic modification is considered as unethical practice as it
+            violates the right of the next generation without consenting them to have their body altered (Collins as
+            cited in Harris, 2018). Without your babies having any say altering their mental emotional and physical
+            makeup is unethical practice (Minchin, 2019). If this procedure is allowed the babies will have their own
+            body designed in a way that their families want them to be and this raises a big ethical issue as parents
+            are determining the future of their children without their consent. By doing so parents are interfering in
+            law nature as well, as they are not giving this job to nature to create us differently. Harris (2018)
+            demonstrates that the new type of biotechnological tools that are introduced to the health care system can
+            aptly be described as a comprehensive attempt to frustrate the course of nature. Nature creates us
+            differently and that is the reason for the cohesion, beauty, harmony, and interdependence among us. But
+            promoting such kinds of biotechnological tools for designing human beings can change the rule of nature,
+            undermine the meaning of life and interdependency as well as the unity that our world currently has. Thus,
+            genetic modification for humans shouldn’t be taken normally due to the above listed ethical consequences.
+            </p>
+
+            <h5> Social Problems</h5>
+            <p> One reason that genetic modification for human beings shouldn’t be allowed is that the social problems
+                it causes. Genetic modification can fade the beauty of our diversity. Indeed, everyone will look
+                relatively similar as most people will seek good looking, intelligent, athletic with other additional
+                optimum characteristics, if embryonic modification, which is part of genetic modification is allowed
+                (Minchin, 2019). If genetic modification for human beings is allowed, especially for the practice of
+                designer babies in cheap price, every parent will try to make the best combination that are possible in
+                the market for their children. This can increase the similarities between individuals and fade our
+                beautiful diversity. Murmson (2019) claims “Genetic engineering poses a risk to our concept of
+                individuality, as individuality is based on some degree of biological difference.” Our diversity is the
+                reason that makes us beautiful and plays an important role in unifying us peacefully. But if people are
+                similar and with all these upgraded characters, everybody will be able to do everything. Thus, it will
+                undermine the dependency between people, and this can make life boring. Moreover, if such kind of
+                biotechnological tool is allowed to be used by humans, a marked gap will be created between societies,
+                and humanity will be undermined. A designer baby, which is the most interesting concern in the study of
+                genetic modification nowadays, can create classes between societies as it is expensive such that only
+                rich people can afford the price. The rising technologies are disruptive in the sense they will
+                undermine the existing social relationships; besides they can fully change the way of life that the
+                people are living (Qiu, 2016). Moreover, they can result in unimaginable power and opportunities and
+                lead to new paradigm shifts (Qiu, 2016). CRISPR technology in humans is explicitly done through the
+                medical procedure known as in vitro fertilization, whereas IVP is an expensive procedure, thus the rich
+                can ensure the biological superiority of their children where are the poor remain inferior as they
+                cannot afford the price (Reddy, 2019). Poor people will be sidelined and no more be treated in the same
+                way with the rich ones. Thus, the world will resemble what it used to look like before three or four
+                decades ago, as this practice can create a marked difference between classes like the division of people
+                into different classes into slaves, intermediate and top level.
+            </p>
+            <h5>Risk and Ineffectiveness</h5>
+            <p>
+         
+            The risks related to the practice and its ineffectiveness is another reason why genetic modification
+            shouldn’t be promoted. Currently, the tools used to modify human embryos and cure genetic disorders
+            including IVP and the latest one which is CRISPR cas9 are not effective that they can accidentally alter
+            off-target chromosomes, causing adverse or even fatal side effects (Shwartz, Holley, & Archibald, n.d.). The
+            CRISPR cas9 mentioned above uses the enzyme named cas9 to exactly detect the target section of DNA that is
+            infected. Then, the molecular scissors following the instructions alter or edit the genome by cutting or
+            adding codons in the correct position. Most of the time the cas9 enzyme wrongly alters another DNA portion
+            as the size of genes is extremely small and not evenly spaced, this makes it difficult to find them exactly.
+            Even if the cas9 enzyme finds the target DNA, the molecular scissors can use wrong instruction, for
+            instance, they can cut a piece of codon and this is a big problem as it fully changes the whole nucleotide
+            series of the DNA. Besides, this can cause different types of genetic diseases or can immediately lead to
+            death. As, even the latest technology that is recently discovered CRISPR cas9 is not an efficient tool to
+            use, designing embryos and treating genetic disorders which are the different ways of genetic modification
+            should be banned. In addition to the side effects, genetic modification can result in unintended mutation
+            and even in evolution, which is the creation of new species. According to Baird (2007), Making changes to
+            the human genetic structure using different technologies can have accidental and unpredictable consequences
+            that can create damage to the gene pool. As the gene is an extremely sophisticated and small part of the
+            human body that determines all the characteristics and behaviors of a person, it is difficult to predict the
+            consequences that can come as a result of alternation of a single part of the genome in any time. The worst
+            thing about genetic disorders is that they are inheritable, so if any change is made in the gene pool of a
+            person it will affect the coming generation. These biotechnological tools that are used in gene editing are
+            so effective that even an accidental release can result in the creation of entirely new species and even
+            often in a short period (Kahn, 2016). This can initiate evolution and split human beings into different
+            kinds of species. Thus, a genetic modification for human beings shouldn’t be promoted as it is a risky and
+            ineffective approach.
+            </p>
+
+
+            <h5>Genetic Modification can Cure Genetic Disorders</h5>
+            <p> Admittedly, some people believe that the biotechnological tools of Genetic modification are good weapons
+                for human beings to deal with genetic disorders and enhancing immunity. Zhai and Qui (2016) highlights
+                that using genome editing is reasonable, as it can treat millions and millions of patients who suffer
+                from genetic diseases. One of the interesting reasons that people, who agree with allowing genetic
+                modification in humans, use is that individuals will not face any kind of diseases including HIV, Cancer
+                and other communicable diseases if they are born with enhanced immunity through the help of the
+                biotechnological tools which is commonly the CRISPR cas9. Studies by Chief (2019) highlight, if people
+                are born genetically modified with enhanced immunity it can increase the life span of human beings.
+                Besides, many people applaud that using such kind of tools can help parents select the gender of their
+                babies before their birth.
+            </p>
+
+
+
+            <p> This argument doesn’t take into consideration the many negative consequences of allowing genetic
+                modification. Firstly, the tools that are used for editing genomes aren’t effective that they can cause
+                off-target gene alternation which can then result in adverse or even fatal genetic side effects. As
+                genes are extremely tiny and sophisticated part that contain billions of characters which determines a
+                person, specialists who are responsible for designing embryos cannot predict the consequences of making
+                alternations in single DNA nucleotide. For instance, one of the negative consequences of off-target
+                effects, which are the result of gene editing, can disable a tumor suppressor gene or activate
+                cancer-causing one (Begley, 2016). Moreover, it might cause pieces of two different chromosomes to
+                combine, to result in a phenomenon called translocation, which is the main cause of the disorder called
+                chronic myeloid leukemia (Begley, 2016). Thus, the biotechnological tools used in designing embryos
+                should not be allowed to be used by people due to their inefficiency that could bring mortal side
+                effects that couldn’t last even for generations. </p>
+
+            <p>
+
+                Many people feel that it is good to restrict the use of genetic modification only for treating genetic
+                disorders; however, Prudent thinkers would realize that if genetic modification happens all the time to
+                cure genetic disorders people will then start to use it in enhancement purposes, and this can change the
+                motive from treatment to customer attraction. Allowing human genetic editing for any reason including
+                for the treatment of genetic disorders would likely lead to violation of the regulatory limits, adoption
+                for enhancement purposes as well as to the efflux of market-based Eugenics that would heighten the
+                exiting inequality, conflict, and discrimination(Collins as cited in Darnovsky, 2018). Moreover, Dr.
+                Knoepfler (2017) highlights, Permitting the creation of genetically modified humans with the noble goal
+                of trying to prevent a rare kind of genetic disease can push us further towards acceptance of designer
+                babies. Thus, genetic modification shouldn’t be allowed at all for any kind of reasons as the
+                consequences are infinite.
+            </p>
+
+            <h5> Conclusion</h5>
+            <p>In conclusion, genetic modification has been one of the biggest findings that the field biology has
+                acquired in a recent couple of decades. The study of genetic modification has improved the world
+                agriculture in different patterns. However, it failed to further operate in human beings due to a number
+                of principal reasons. Genetic modification, which is the result of the disruptive biotechnological
+                advances, should be disrupted from further improving by the responsible action takers which are
+                Governments, organizations, and Scientists. As it can bring a different type of genetic side effects,
+                social problems, and ethical concerns. Some people might argue that genetic modification should be
+                allowed for treating genetic disorders and enhancing immunity. However, they didn’t consider the
+                negative consequences because, if genetic editing for humans is allowed, it can escape the regulatory
+                limits and lead to the emergence of market-based eugenics that will furtherly initiate already existing
+                conflict, discrimination, and inequality. Thus, genetic modification should not be allowed for any
+                reason, as changing the nature of what it means humans has a lot of consequences.
+                 
+            </p>
+
+
+
+            <h4> References</h4>
+
+
+            <p>
+                Baird, S. L. (2007). Designer Babies: Eugenics Repackaged or Consumer Options? (Cover story). Technology
+                Teacher, 66(7), 12-16.
+            </p>
+
+            <p>
+                Begley, S. (2016, August 10). CRISPR has off-target effects that researchers have been ignoring.
+                Retrieved from https://www.statnews.com/2016/07/18/crispr-off-target-effects/
+            </p>
+
+            <p>
+                Chief, E. in. (2019, January 28). 26 Designer Babies Pros and Cons. Retrieved from
+                https://connectusfund.org/26-designer-babies-pros-and-cons
+            </p>
+
+            <p>
+
+                Harris, J., & Darnovsky, M. (2018, November 26). Pro and Con: Should Gene Editing Be Performed on Human
+                Embryos? Retrieved from
+                https://www.nationalgeographic.com/magazine/2016/08/human-gene-editing-pro-con-opinions/
+            </p>
+
+            <p>
+
+                Human Genetic Modification. (n.d.). Retrieved from
+                https://www.geneticsandsociety.org/topics/human-genetic-modification
+            </p>
+
+            <p>
+                kahn, J. (2016, June 2). Retrieved from https://www.youtube.com/watch?v=OI_OhvOumT0
+
+            </p>
+            <p>
+                Knoepfler, P. (2017, February 20). Retrieved from https://www.youtube.com/watch?v=nOHbn8Q1fBM
+
+            </p>
+            <p>
+
+                Minchin, S. (2020, January 16). The Pros and Cons of Having a Designer Baby. Retrieved from
+                https://explorebiotech.com/pros-cons-designer-baby/
+
+            </p>
+
+            <p>
+                Murmson, S. (2019, March 2). Loss of Individuality Due to Genetic Engineering. Retrieved from
+                https://sciencing.com/loss-individuality-due-genetic-engineering-23468.html
+            </p>
+            <p>
+                Reddy, N. (2017, December 19). Designer Babies and Genetic Modification: Inequality on a Biological
+                Scale. Retrieved from
+                https://www.huffpost.com/entry/designer-babies-and-genetic-modification-inequality_b_5a3891c9e4b0c12e6337b052
+            </p>
+
+            <p>
+                RENZONG QIU. (2016). Debating Ethical Issues in Genome Editing Technology. Asian Bioethics Review, 8(4),
+                307-326. https://doi.org/10.1353/asb.2016.0026
+            </p>
+            <p>
+                Ross, R. (2019, February 1). What Is Genetic Modification? Retrieved from
+                https://www.livescience.com/64662-genetic-modification.html
+            </p>
+            <p>
+                Shwartz, M., Holley, J., & Archibald, T. (n.d.). CRISPR is a gene-editing tool that's revolutionary,
+                though not without risk. Retrieved from
+                https://stanmed.stanford.edu/2018winter/CRISPR-for-gene-editing-is-revolutionary-but-it-comes-with-risks.html
+            </p>
+            <p>
+                The Price tag on Designer Babies: Market Share Liability. (2018). Boston College Law Review, 59(1),
+                319-353
+            </p>
+            <p>
+                Vidyasagar, A. (2018, April 21). What Is CRISPR? Retrieved from
+                https://www.livescience.com/58790-crispr-explained.html
+            </p>
+            <br>
+            <br><br><br>
+
+
+
+
+
+
+        </div>
+    </section>
+    <footer>
+        <div class="main-content">
+            <div class="left box">
+                <h2>About us</h2>
+                <div class="content">
+                    <p>
+                        This online library as well as bookstore is created to satisfy the reading lust of all people
+                        especially
+                        readers in an easy and fun way. Moreover, you can buy books, articles, magazines as well as
+                        newspapers of
+                        different types published from all over the world. Our motive is to build a reading community
+                        with creative
+                        mind, prudent way of thinking, Positive and learning mindsets.
+                    </p>
+                    <div class="social">
+                        <a href="#"><span class="fab fa-facebook-f"></span></a>
+                        <a href="#"><span class="fab fa-twitter"></span></a>
+                        <a href="#"><span class="fab fa-instagram"></span></a>
+                        <a href="#"><span class="fab fa-youtube"></span></a>
+                        <a href="#"><span class="fab fa-linkedin"></span></a>
+                        <a href="#"><span class="fab fa-pinterest"></span></a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="center box">
+                <h2>Address</h2>
+                <div class="content">
+                    <div class="place">
+                        <a href="https://goo.gl/maps/6Q4XGAHgLy64LvAj9"><span class="fas fa-map-marker-alt"></span></a>
+                        <span class="text"> United Arab Emirates, Abu Dhabi</span>
+                    </div>
+                    <div class="phone">
+                        <span class="fas fa-phone-alt"></span>
+                        <span class="text">+971-545-305-388</span>
+                    </div>
+                    <div class="email">
+                        <span class="fas fa-envelope"></span>
+                        <span class="text">simonzerisenay@gmail.com</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="right box">
+                <h2> Contact us</h2>
+                <div class="content">
+                    <form action="#">
+                        <div class="email">
+                            <div class="text">Email *</div>
+                            <input type="email" required>
+                        </div>
+                        <div class="msg">
+                            <div class="text"> Message *</div>
+                            <textarea cols="25" rows="2" required></textarea>
+
+                        </div>
+                        <div class="btn">
+                            <button class="Sbtn" type="submit">Send</button>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+
+
+
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Simon Zerisenay Online Library</title>
+  <!-- <link rel="stylesheet" href="home-style.css"> -->
+  <link rel="stylesheet" href="shopping-style.css">
+  <!-- Bootstrap JS, jquery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <!-- Bootstrap  CSS CDN  -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+
+  <!-- Font-Awesome cdn -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Faster+One&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+  <!-- Smartsupp Live Chat script -->
+  <!-- Smartsupp Live Chat script -->
+  <script type="text/javascript">
+    var _smartsupp = _smartsupp || {};
+    _smartsupp.key = 'a0ac4fcef9a6eae5051413bb4c7485665bfa4666';
+    window.smartsupp || (function (d) {
+      var s, c, o = smartsupp = function () { o._.push(arguments) }; o._ = [];
+      s = d.getElementsByTagName('script')[0]; c = d.createElement('script');
+      c.type = 'text/javascript'; c.charset = 'utf-8'; c.async = true;
+      c.src = 'https://www.smartsuppchat.com/loader.js?'; s.parentNode.insertBefore(c, s);
+    })(document);
+  </script>
+  <style type="text/css">
+    h1 {
+      color: yellow;
+    }
+
+    /* theme color */
+    body {
+      transition: background 0.4s linear;
+    }
+
+    body.dark {
+      background: #000000;
+
+
+    }
+
+    nav {
+      transition: background 0.4s linear;
+    }
+
+    body.dark nav {
+      background-color: black;
+    }
+
+    footer {
+      transition: background 0.4s linear;
+    }
+
+    body.dark footer {
+      background-color: black;
+    }
+
+    /* body.dark nav a{
+      color:white;
+
+    } */
+    .checkbox {
+      opacity: 0;
+      position: absolute;
+
+    }
+
+    .togglers {
+      margin-top: 5px;
+    }
+
+    .togglers label {
+
+      align-items: center;
+      border-radius: 50px;
+      position: relative;
+      justify-content: space-between;
+      background-color: #111;
+      padding: 5px;
+      display: flex;
+      width: 50px;
+      height: 26px;
+      transform: scale(1.1);
+    }
+
+    .ball {
+      border-radius: 50%;
+      background-color: #fff;
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 22px;
+      height: 22px;
+      transition: transform 0.2s linear;
+
+    }
+
+    .fa-moon {
+      color: #f1c40f;
+    }
+
+    .fa-sun {
+      color: #f39c12;
+    }
+
+    .checkbox:checked+.label .ball {
+      transform: translateX(24px);
+    }
+    
+  </style>
+
+
+
+</head>
+
+<body>
+   <!-- Navigation -->
+   <section id="nav-bar">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="http://simonzerisenay-com.stackstaging.com/Simon/SimonZerisenayProWebsite.html"><img
+          src="Sizerlogo.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="Home.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Blogs.html">BLOGS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Contacts.html">CONTACTS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="AboutUs.html">ABOUT US</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              READINGS
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="Books.html">BOOKS</a>
+              <a class="dropdown-item" href="Megazine.html">MEGAZINE</a>
+              <a class="dropdown-item" href="Article.html">ARTICLE</a>
+              <a class="dropdown-item" href="Newspaper.html">NEWSAPAPER</a>
+
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              MORE
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="Games.html">GAMES</a>
+              <a class="dropdown-item" href="http://sizer-com.stackstaging.com/Simon/SWE.245/Wforecast.php">WEATHER
+                FORECAST</a>
+              <a class="dropdown-item" href="ReactionTester.html">REACTION TESTER</a>
+              <a class="dropdown-item" href="Videos.html">VIDEOS</a>
+              <a class="dropdown-item" href="http://sizer-com.stackstaging.com/Simon/SWE.245/SQL/">SECRET DIARY</a>
+              <a class="dropdown-item" href="Help.html">HELP</a>
+          <li class="nav-item">
+            <div class="signin">
+              <a href="http://sizer-com.stackstaging.com/Simon/mySQL/SIGNUP/index.php">
+
+                Logout
+
+              </a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="togglers">
+              <input type="checkbox" class="checkbox" id="checkbox">
+              <label for="checkbox" class="label">
+                <!-- <img src="/fontawesome/svgs/regular/sun.svg" alt=""> -->
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="ball"></div>
+              </label>
+
+            </div>
+          </li>
+          <script type="text/javascript">
+            const checkbox = document.getElementById('checkbox');
+            checkbox.addEventListener('change', () => {
+              //change the theme of the website
+              document.body.classList.toggle('dark');
+            })
+          </script>
+      </div>
+      </li>
+
+
+
+
+
+
+
+
+
+
+      </ul>
+
+      </div>
+    </nav>
+  </section>
+  <section>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+       
+
+
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="reading1.jpg" alt="First slide">
+          <div class="carousel-caption">
+            <div class="col-xs-3 ">
+
+              <br><br><br><br>
+              <!-- <h1 style="font-family: 'Faster One', cursive;">“I can feel infinitely alive curled up on the sofa reading a book.” – Benedict Cumberbatch</h1> -->
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" data-interval="1500">
+          <img class="d-block w-100" src="reading2.jpeg" alt="Second slide">
+          <div class="carousel-caption">
+            <div class="col-xs-3 ">
+
+              <br><br><br><br>
+              <!-- <h1 style="font-family: 'Faster One', cursive;">“A good [short story] would take me out of myself and then stuff me back in, outsized, now, and uneasy with the fit.” – David Sedaris</h1> -->
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" data-interval="1500">
+          <img class="d-block w-100" src="reading3.jpg" alt="Third slide">
+          <div class="carousel-caption">
+            <div class="col-xs-3 ">
+
+              <br><br><br><br>
+              <!-- <h4 style="font-family: 'Faster One', cursive;">“Read a lot. Expect something big, something exalting or deepening from a book. No book is worth reading that isn’t worth re-reading.” – Susan Sontag</h4> -->
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" data-interval="1500">
+          <img class="d-block w-100" src="reading4.jpg" alt="Fourth slide">
+          <div class="carousel-caption">
+            <div class="col-xs-3 ">
+
+              <br><br><br><br>
+              <!-- <h1 style="font-family: 'Faster One', cursive;">“Once you learn to read, you will be forever free.” – Frederick Douglass</h1> -->
+            </div>
+          </div>
+        </div>
+     
+      
+      
+       
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </section>
+
+
+  <section>
+    <div class="d-flex justify-content-center flex-wrap" style="margin: 50px;">
+      <div class="card" style="width: 15rem;">
+        <div class="card-img-top d-flex justify-content-center">
+        <img  src="elonmask.jpg" alt="Card image cap">
+          </div>
+        <div class="card-body">
+          <h5 class="card-title">Elon Musk: Tesla, Spacex, and the Quest for a Fantastic Future</h5>
+          <p class="card-text text-right">AED 32.25</p>
+         <a href="https://www.amazon.ae/Elon-Musk-Spacex-Fantastic-Future/dp/0062469673/ref=asc_df_0062469673/?tag=googleshopp09-21&linkCode=df0&hvadid=378633651537&hvpos=&hvnetw=g&hvrand=16951460421998256747&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1000010&hvtargid=pla-385138107079&psc=1">
+          <button class="btn ripple-effect d-flex align-items-center justify-content-center">
+            <i class="far fa-credit-card"></i>
+          </button>
+         </a>
+          
+        </div>
+      </div>
+    
+      <div class="card" style="width: 15rem;">
+        <div class="card-img-top d-flex justify-content-center">
+        <img  src="timcook.jpg" alt="Card image cap">
+          </div>
+        <div class="card-body">
+          <h5 class="card-title">Tim Cook: The Genius who Took Apple to the Next Level</h5>
+          <p class="card-text text-right">AED 76.86</p>
+         <a href="https://www.amazon.ae/Tim-Cook-Genius-Apple-Level/dp/0525537600/ref=asc_df_0525537600/?tag=googleshopp09-21&linkCode=df0&hvadid=386316355080&hvpos=&hvnetw=g&hvrand=16530509182693054472&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1000010&hvtargid=pla-665134326918&psc=1">
+          <button class="btn ripple-effect d-flex align-items-center justify-content-center">
+            <i class="far fa-credit-card"></i>
+          </button>
+         </a>
+   
+        </div>
+      </div>
+    
+      <div class="card" style="width: 15rem;">
+        <div class="card-img-top d-flex justify-content-center">
+        <img  src="mbr.jpg" alt="Card image cap">
+          </div>
+        <div class="card-body">
+          <h5 class="card-title">My Story by Mohammed Bin Rashed AlMaktoum</h5> <br>
+          <p class="card-text text-right">AED 70.53</p>
+          <a href="https://www.amazon.ae/MI-HISTORIA-My-Story-Spanish/dp/1785965158/ref=asc_df_1785965158/?tag=googleshopp09-21&linkCode=df0&hvadid=385825982388&hvpos=&hvnetw=g&hvrand=9708142463346535885&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1000010&hvtargid=pla-824484682548&psc=1">
+
+          </a><button class="btn ripple-effect d-flex align-items-center justify-content-center">
+            <i class="far fa-credit-card"></i>
+          </button>
+        </div>
+      </div>
+       
+       <div class="card" style="width: 15rem;">
+        <div class="card-img-top d-flex justify-content-center">
+        <img  src="einstein.jpg" alt="Card image cap">
+          </div>
+        <div class="card-body">
+          <h5 class="card-title">Einstein: The man, the Genius, and the Theory of Relativity</h5><br>
+          <p class="card-text text-right">AED 74.57</p>
+          <a href="https://www.amazon.ae/Einstein-man-genius-Theory-Relativity/dp/0233005471/ref=asc_df_0233005471/?tag=googleshopp09-21&linkCode=df0&hvadid=406648573333&hvpos=&hvnetw=g&hvrand=9107766463587212375&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1000010&hvtargid=pla-525271260850&psc=1">
+            <button class="btn ripple-effect d-flex align-items-center justify-content-center">
+              <i class="far fa-credit-card"></i>
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 15rem;">
+        <div class="card-img-top d-flex justify-content-center">
+        <img  src="limitless.jpg" alt="Card image cap">
+          </div>
+        <div class="card-body">
+          <h5 class="card-title">Limitless: Master the Art of Memory improvement with Brain Training to learn Faster </h5>
+          <p class="card-text text-right">AED 70.25</p>
+         <a href="https://www.amazon.ae/Limitless-Improvement-Training-Remember-Productivity/dp/1913397211/ref=asc_df_1913397211/?tag=googleshopp09-21&linkCode=df0&hvadid=406630732924&hvpos=&hvnetw=g&hvrand=7681432197195172495&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1000010&hvtargid=pla-930657115394&psc=1">
+          <button class="btn ripple-effect d-flex align-items-center justify-content-center">
+          
+            <i class="far fa-credit-card"></i>
+          </button>
+         </a> 
+        </div>
+      </div>
+       
+       <div class="card" style="width: 15rem;">
+        <div class="card-img-top d-flex justify-content-center">
+        <img  src="Dwyne.jpg" alt="Card image cap">
+          </div>
+        <div class="card-body">
+          <h5 class="card-title">Dwayne 'the Rock' Jonhson: The Life, Lessons & Rules for Success.</h5><br>
+          <p class="card-text text-right">AED 39.81</p>
+          <a href="https://www.amazon.ae/Dwayne-Rock-Johnson-Lessons-Success/dp/1790217229/ref=asc_df_1790217229/?tag=googleshopp09-21&linkCode=df0&hvadid=406646124234&hvpos=&hvnetw=g&hvrand=10253064310676505899&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1000010&hvtargid=pla-605286686314&psc=1">
+            <button class="btn ripple-effect d-flex align-items-center justify-content-center">
+              <i class="far fa-credit-card"></i>
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 15rem;">
+        <div class="card-img-top d-flex justify-content-center">
+        <img  src="trump.jpg" alt="Card image cap">
+          </div>
+        <div class="card-body">
+          <h5 class="card-title">Think Big: Make It Happen in Buisness and Life</h5><br><br>
+          <p class="card-text text-right">AED 44.07</p>
+          <a href="https://www.amazon.ae/Think-Big-Make-Happen-Business/dp/0061547840/ref=asc_df_0061547840/?tag=googleshopp09-21&linkCode=df0&hvadid=406569508035&hvpos=&hvnetw=g&hvrand=5154015282024519894&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1000010&hvtargid=pla-453899280850&psc=1">
+
+          <button class="btn ripple-effect d-flex align-items-center justify-content-center">
+            <i class="far fa-credit-card"></i>
+          </button>
+          </a>
+        </div>
+      </div>
+       
+       <div class="card" style="width: 15rem;">
+        <div class="card-img-top d-flex justify-content-center">
+        <img  src="Hindsight.jpg" alt="Card image cap">
+          </div>
+        <div class="card-body">
+          <h5 class="card-title">Hindsight: & All the Things I can't See infront of me</h5><br><br>
+          <p class="card-text text-right">AED 84.88</p>
+         <a href="https://www.amazon.ae/Hindsight-All-Things-Cant-Front/dp/0062448307/ref=asc_df_0062448307/?tag=googleshopp09-21&linkCode=df0&hvadid=406719306655&hvpos=&hvnetw=g&hvrand=12751493362746136003&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1000010&hvtargid=pla-525398035121&psc=1">
+          <button class="btn ripple-effect d-flex align-items-center justify-content-center">
+            <i class="far fa-credit-card"></i>
+          </button>
+         </a> 
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="wrapper">
+      <button class="btn shop d-flex align-items-center justify-content-center">
+        <i class="fas fa-cart-plus"></i>
+      </button>
+      <div class="target d-flex align-items-center justify-content-center"><i class="fas fa-box"></i></div>
+    </div>
+
+  </section>
+
+
+
+   
+  <footer>
+    <div class="main-content">
+      <div class="left box">
+        <h2>About us</h2>
+        <div class="content">
+          <p>
+            This online library as well as bookstore is created to nurture the reading lust of all people especially
+            readers in an easy and fun way. Moreover, you can buy books, articles, magazines as well as newspapers of
+            different types published from all over the world. Our motive is to build a reading community with creative
+            mind, prudent way of thinking, Positive and learning mindsets.
+          </p>
+          <div class="social">
+            <a href="#"><span class="fab fa-facebook-f"></span></a>
+            <a href="#"><span class="fab fa-twitter"></span></a>
+            <a href="#"><span class="fab fa-instagram"></span></a>
+            <a href="#"><span class="fab fa-youtube"></span></a>
+            <a href="#"><span class="fab fa-linkedin"></span></a>
+            <a href="#"><span class="fab fa-pinterest"></span></a>
+          </div>
+
+        </div>
+      </div>
+      <div class="center box">
+        <h2>Address</h2>
+        <div class="content">
+          <div class="place">
+            <a href="https://goo.gl/maps/6Q4XGAHgLy64LvAj9"><span class="fas fa-map-marker-alt"></span></a>
+            <span class="text"> United Arab Emirates, Abu Dhabi</span>
+          </div>
+          <div class="phone">
+            <span class="fas fa-phone-alt"></span>
+            <span class="text">+971-545-305-388</span>
+          </div>
+          <div class="email">
+            <span class="fa fa-envelope"></span>
+            <span class="text">simonzerisenay@gmail.com</span>
+          </div>
+        </div>
+
+      </div>
+      <div class="right box">
+        <h2> Contact us</h2>
+        <div class="content">
+          <form action="#">
+            <div class="email">
+              <div class="text">Email *</div>
+              <input type="email" required>
+            </div>
+            <div class="msg">
+              <div class="text"> Message *</div>
+              <textarea cols="25" rows="2" required></textarea>
+
+            </div>
+            <div class="btn">
+              <button class="Sbtn" type="submit">Send</button>
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+
+
+
+
+    </div>
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="https://ae.linkedin.com/in/simon-zerisenay-232220193"> Simon Zerisenay</a>
+    </div>
+    <!-- Copyright -->
+
+
+
+  </footer>
+
+</body>
+
+</html>

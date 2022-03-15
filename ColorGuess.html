@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Simon Zerisenay Online Library</title>
+    <link rel="stylesheet" href="ColorGuess.css">
+
+    <link rel="icon" href="fav.png">
+    <!-- Bootstrap JS, jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap  CSS CDN  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+    <!-- Font-Awesome cdn -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+<style type='text/css'>
+.container{
+    /* text-align: center; */
+    padding-bottom: 15%;
+    max-width: 300px;
+    margin: auto;
+}
+body{
+      transition: background 0.4s linear;
+      background-color: bisque;
+    }
+    body.dark {
+      background: #000000;
+
+
+    }
+    nav{
+      transition: background 0.4s linear;
+    }
+    body.dark nav{
+        background-color: black;
+    }
+    body.dark ul{
+      background-color: black;
+    }
+    li{
+        transition: background 0.4s linear;
+    }
+    body.dark li{
+        color:white;
+    }
+    footer{
+      transition: background 0.4s linear;
+    }
+    body.dark footer{
+      background-color: black;
+    }
+    body.dark p{
+        color: white;
+    }
+    body.dark h4{
+        color: white;
+
+    }
+    body.dark h5{
+        color: white;
+
+    }
+    body.dark h1{
+        color: white;
+    }
+    body.dark h3{
+        color:white;
+    }
+    
+
+  
+    /* body.dark nav a{
+      color:white;
+
+    } */
+    .checkbox{
+      opacity: 0;
+      position: absolute;
+
+    }
+    .togglers{
+      margin-top: 5px;
+    }
+   
+    .togglers label{
+     
+      align-items: center;
+      border-radius: 50px;
+      position: relative;
+      justify-content: space-between; 
+      background-color: #111;
+      padding: 5px;
+      display:flex;
+      width: 50px;
+      height: 26px;
+      transform: scale(1.1);
+    }
+    .ball{ 
+      border-radius: 50%;
+      background-color: #fff;
+      position: absolute;
+      top:2px;
+      left:2px;
+      width: 22px;
+      height: 22px;
+      transition: transform 0.2s linear;
+
+    }
+    .fa-moon{
+      color: #f1c40f;
+    }
+    .fa-sun{
+      color: #f39c12;
+    }
+    .checkbox:checked + .label .ball {
+        transform: translateX(24px);
+    }
+
+    ul.breadcrumb {
+            padding: 10px 16px;
+            list-style: none;
+            background-color: #FFE4C4;
+        }
+
+        ul.breadcrumb li {
+            display: inline;
+            font-size: 18px;
+        }
+
+        ul.breadcrumb li+li:before {
+            padding: 8px;
+            color: black;
+            content: "/\00a0";
+        }
+
+        ul.breadcrumb li a {
+            color: #0275d8;
+            text-decoration: none;
+        }
+
+        ul.breadcrumb li a:hover {
+            color: #01447e;
+            text-decoration: underline;
+        }
+</style>
+
+</head>
+
+<body>
+      <!-- Navigation -->
+   <section id="nav-bar">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="http://simonzerisenay-com.stackstaging.com/Simon/SimonZerisenayProWebsite.html"><img
+          src="Sizerlogo.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="Home.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Blogs.html">BLOGS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Contacts.html">CONTACTS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="AboutUs.html">ABOUT US</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              READINGS
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="Books.html">BOOKS</a>
+              <a class="dropdown-item" href="Megazine.html">MEGAZINE</a>
+              <a class="dropdown-item" href="Article.html">ARTICLE</a>
+              <a class="dropdown-item" href="Newspaper.html">NEWSAPAPER</a>
+             
+      </div>
+      </li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              MORE
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="Games.html">GAMES</a>
+              <a class="dropdown-item" href="http://sizer-com.stackstaging.com/Simon/SWE.245/Wforecast.php">WEATHER
+                FORECAST</a>
+              <a class="dropdown-item" href="ReactionTester.html">REACTION TESTER</a>
+              <a class="dropdown-item" href="Videos.html">VIDEOS</a>
+              <a class="dropdown-item" href="http://sizer-com.stackstaging.com/Simon/SWE.245/SQL/">SECRET DIARY</a>
+              <a class="dropdown-item" href="Help.html">HELP</a>
+          <li class="nav-item">
+            <div class="signin">
+              <a href="http://sizer-com.stackstaging.com/Simon/mySQL/SIGNUP/index.php">
+
+                Logout
+
+              </a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="togglers">
+              <input type="checkbox" class="checkbox" id="checkbox">
+              <label for="checkbox" class="label">
+                <!-- <img src="/fontawesome/svgs/regular/sun.svg" alt=""> -->
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="ball"></div>
+              </label>
+
+            </div>
+          </li>
+          <script type="text/javascript">
+            const checkbox = document.getElementById('checkbox');
+            checkbox.addEventListener('change', () => {
+              //change the theme of the website
+              document.body.classList.toggle('dark');
+            })
+          </script>
+      </div>
+      </li>
+      
+
+    
+
+
+
+
+
+
+      
+      </ul>
+
+      </div>
+    </nav>
+    <ul class="breadcrumb">
+        <li>More</li>
+        <li><a href="Games.html">Games</a></li>
+        
+        <li>Color Guess Game</li>
+      </ul>
+  </section>
+        
+    
+  
+    <section>
+        <div class="container">
+
+            <img src="correct.svg" alt="" id="checkmark">
+            <img src="incorrect.svg" alt="" id="wrong">
+            <div class="top">
+                <button id="start" onclick="startGame()">Start</button>
+                <div id="color1" class="colorText color1"></div>
+                <div id="color2" class="colorText color2"></div>
+            </div>
+            <div class="bottom">
+                <div class="row">
+                    <div id="Blue" class="color blue"></div>
+                    <div id="Red" class="color red"></div>
+                </div>
+                <div class="row">
+                    <div id="Green" class="color green"></div>
+                    <div id="Yellow" class="color yellow"></div>
+                </div>
+            </div>
+            <span id="correct"></span>
+            <span id="time"></span>
+        </div>
+
+    </section>
+    <footer>
+        <div class="main-content">
+            <div class="left box">
+                <h2>About us</h2>
+                <div class="content">
+                    <p>
+                        This online library as well as bookstore is created to nurture the reading lust of all people especially
+                        readers in an easy and fun way. Moreover, you can buy books, articles, magazines as well as newspapers of
+                        different types published from all over the world. Our motive is to build a reading community with creative
+                        mind, prudent way of thinking, Positive and learning mindsets.
+                    </p>
+                    <div class="social">
+                        <a href="#"><span class="fab fa-facebook-f"></span></a>
+                        <a href="#"><span class="fab fa-twitter"></span></a>
+                        <a href="#"><span class="fab fa-instagram"></span></a>
+                        <a href="#"><span class="fab fa-youtube"></span></a>
+                        <a href="#"><span class="fab fa-linkedin"></span></a>
+                        <a href="#"><span class="fab fa-pinterest"></span></a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="center box">
+                <h2>Address</h2>
+                <div class="content1">
+                    <div class="place">
+                        <a href="https://goo.gl/maps/6Q4XGAHgLy64LvAj9"><span class="fas fa-map-marker-alt"></span></a>
+                        <span class="text"> United Arab Emirates, Abu Dhabi</span>
+                    </div>
+                    <div class="phone">
+                        <span class="fas fa-phone-alt"></span>
+                        <span class="text">+971-545-305-388</span>
+                    </div>
+                    <div class="email">
+                        <span class="fas fa-envelope"></span>
+                        <span class="text">simonzerisenay@gmail.com</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="right box">
+                <h2> Contact us</h2>
+                <div class="content1">
+                    <form action="#">
+                        <div class="email">
+                            <div class="text">Email *</div>
+                            <input type="email" required>
+                        </div>
+                        <div class="msg">
+                            <div class="text"> Message *</div>
+                            <textarea cols="25" rows="2" required></textarea>
+
+                        </div>
+                        <div class="btn">
+                            <button class="Sbtn" type="submit">Send</button>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+
+
+
+    </footer>
+</body>
+<script type="text/javascript">
+    var colors = ["Blue", "Red", "Green", "Yellow"];
+    function startGame() {
+        setInterval(timer, 1000);
+        reset();
+    }
+    var checkmark = document.getElementById("checkmark");
+    var wrong = document.getElementById("wrong");
+    var correct = document.getElementById("correct");
+    var correctInt = 0
+    function checkColor(color, correctAnswer) {
+        if (color === correctAnswer) {
+            correctInt++;
+            checkmark.classList.add("fadeAway");
+        } else {
+            wrong.classList.add("fadeAway");
+        }
+        setTimeout(function () {
+            checkmark.classList.remove("fadeAway");
+            wrong.classList.remove("fadeAway");
+        }, 500);
+        reset();
+        correct.innerHTML = correctInt;
+    }
+
+    function reset() {
+        var random1 = Math.floor(Math.random() * 2);
+        if (random1 == 0) {
+            var color1 = document.getElementById("color1");
+            var color2 = document.getElementById("color2");
+        } else {
+            var color2 = document.getElementById("color1");
+            var color1 = document.getElementById("color2");
+        }
+        document.getElementById("start").style.display = "none";
+        var random = Math.floor(Math.random() * 4);
+        var correctAnswer = colors[random];
+        color1.innerHTML = correctAnswer;
+        color2.style.color = correctAnswer;
+        if (random + 1 == 4) {
+            color2.innerHTML = colors[random - 3];
+        } else {
+            color2.innerHTML = colors[random + 1];
+        }
+        if (random - 1 == -1) {
+            color1.style.color = colors[random + 3];
+        } else {
+            color1.style.color = colors[random - 1];
+        }
+        color1.style.display = "block";
+        color2.style.display = "block";
+        addClick("Blue", correctAnswer);
+        addClick("Red", correctAnswer);
+        addClick("Green", correctAnswer);
+        addClick("Yellow", correctAnswer);
+    }
+    function addClick(color, correctAnswer) {
+        var colorSpan = document.getElementById(color);
+        let onclick = "checkColor('".concat(color, "','", correctAnswer, "')");
+        colorSpan.setAttribute("onclick", onclick);
+    }
+
+    var countdown = 30;
+    function timer() {
+        document.getElementById("time").innerHTML = countdown;
+        if (countdown == 0) {
+            clearInterval(timer);
+            alert("Game Over. Score: " + correctInt);
+            location.reload();
+        }
+        countdown--;
+    }
+
+</script>
+
+</html>

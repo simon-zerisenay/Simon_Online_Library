@@ -1,0 +1,255 @@
+/* Signin button */
+.signin{
+    font-family: sans-serif;
+
+}
+.signin a
+{
+    display: inline-block;
+    padding: 7px 18px;
+    font-weight: 600;
+    font-size: 16px;
+    color:#555!important;
+    border-radius: 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    overflow: hidden;
+    transition: 0.2s;
+
+
+}
+.signin a:hover{
+    text-decoration: none;
+    color:#000000;
+    background: #B2BABB;
+    box-shadow: 0 0 10px #76D7C4   ,0 0 40px #76D7C4   0 0 80px #76D7C4  ;
+    transition-delay: 5ms;
+}
+#nav-bar
+{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+   
+}
+.navbar-brand img
+{
+    height: 40px;
+    padding-left: 30px;
+
+}
+.navbar-nav li
+{
+  padding: 0 10px;
+}
+.navbar-nav li a
+{
+  float: right;
+  text-align: left;
+
+}
+#nav-bar ul li a:hover
+{
+    color: #007bff!important;
+}
+
+.navbar{
+    background:#fff;
+}
+.navbar-toggler
+{
+    border: none!important;
+
+}
+.nav-link
+{
+    color: #555!important;
+    font-weight: 600;
+    font-size: 16px;
+
+}
+/* FOOTER */
+footer
+{
+    /* position: fixed; */
+    bottom: 0px;
+    width:100%;
+    background: #34495E;
+    color: white;
+}
+.main-content
+{
+    display: flex;
+}
+.main-content .box
+{
+   flex-basis: 50%;
+   padding: 10px 20px;
+}
+.box h2
+{
+   font-size: 1.125rem;
+   font-weight: 600;
+   text-transform: uppercase;
+}
+.box .content
+{
+   margin: 20px 0 0 0;
+}
+.left .content p
+{
+   text-align: justify;
+
+}
+.left .content1 .social{
+   margin: 20px 0 0 0;
+
+
+}
+.left .content .social a
+{
+   padding: 0 2px;
+}
+.left .content .social a span
+{
+   height: 40px;
+   width: 40px;
+   background: #1a1a1a;
+   line-height: 40px;
+   text-align:  center;
+   font-size: 18px;
+   border-radius: 5px;
+   transition: 0.3s ;
+
+
+}
+.left .content .social a span:hover{
+   background: #f12020 ;
+
+}
+.Sbtn{
+    border-radius: 5px;
+    width: 150%;
+    height: 50%;
+
+}
+.Sbtn:hover{
+    background-color: #138D75;
+    transition: 0.3s;
+    
+}
+.Sbtn:active{
+    transform:scale(1.2, 1);
+}
+.Keysites{
+    background-color: #34495E;
+    margin-top: 0.05%;
+    text-align: center;
+   
+  
+
+}
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    overflow-x: none;
+}
+body{
+   
+}
+.bottom{
+    display: flex;
+}
+.color{
+    width: 150px;
+    height: 150px;
+    transition: transform 300ms;
+}
+.color:hover{
+    transform: scale(0.9);
+}
+.blue{
+    background-color: blue;
+}
+.red{
+    background-color: red;
+}
+.green{
+    background-color: green;
+}
+.yellow{
+    background-color: yellow;
+}
+
+.top{
+    margin-top: 1rem;
+    width: 300px;
+    height: 200px;
+    display: grid;
+    text-align: center;
+}
+.colorText{
+    font: 3rem sans-serif; 
+    display: none;
+}
+.color1{
+    
+}
+.color2{
+    
+}
+#time{
+    position: absolute;
+/*    bottom: 20px;*/
+    text-align: center;
+    width: 300px;
+    font: 3rem sans-serif; 
+}
+#correct{
+    position: absolute;
+    color: lawngreen;
+    text-shadow: 0px 0px 10px black;
+    font: 3rem sans-serif; 
+}
+#checkmark, #wrong{
+    pointer-events: none;
+    position: absolute;
+    width: 10%;
+    left: 45%;
+    top: 10%;
+    opacity: 0;
+}
+@media only screen and (max-width: 600px){
+    #checkmark, #wrong{
+        position: absolute;
+        width: 50%;
+        left: 25%;
+        top: 10%;
+    }
+}
+
+.fadeAway{
+    animation: fadeAway 500ms;
+}
+@keyframes fadeAway{
+    0%{opacity: 1}
+    50%{opacity: 1}
+    100%{opacity: 0}
+}
+#start{
+    font-size: 2rem;
+    height: 100px;
+    padding: 0.5rem 2rem;
+    border: 3px solid black;
+    border-radius: 0.3rem;
+    margin: 1rem auto;
+    display: block;
+}
+#start{
+    background-color: lightgreen;
+}
+#start:hover{
+    background-color: yellow; 
+}

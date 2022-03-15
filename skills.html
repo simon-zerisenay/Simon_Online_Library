@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Simon Zerisenay Online Library</title>
+    <link rel="stylesheet" href="home-style.css">
+    <!-- Bootstrap JS, jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap  CSS CDN  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+    <!-- Font-Awesome cdn -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style type="text/css">
+        body{
+          /* background-image:url("skillsbackground.png"); */
+          /* background-color:gray;
+          background-size: cover; */
+          /* display: flex; */
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+          background-color:#343A40;
+        
+
+        }
+        @font-face {
+            font-family: "amazing" ;
+            src: url("font/The\ Led\ Display\ St.ttf");
+        }
+        h1{
+            font-family: "amazing";
+            color: white ;
+            text-align: center;
+            border-bottom: 2px #00FFFF solid;
+            box-shadow: #777;
+        }
+        .container .card
+        {
+          position:relative;
+          width:250px;
+          background: linear-gradient(0deg,#1b1b1b,#222, #1b1b1b);
+          display:flex;
+          justify-content: center;
+          align-items: center;
+          height:300px;
+          border-radius: 4px;
+          text-align: center;
+          overflow:hidden;
+          transition: 0.5s;
+
+        }
+        .container .card :hover
+        {
+          transform: translateY(-10px);
+          box-shadow: 0 15px 35px rgba(0,0,0,.5);
+        }
+        .container .card :before
+        {
+          content: '';
+          position:absolute;
+          top: 0;
+          left:0;
+          width: 100%;
+          height: 100px;
+          background: rgba(255, 255, 255, .03);
+          pointer-events: none;
+          z-index: 1;
+
+
+        }
+        .percent{
+          position: relative;
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          box-shadow: inset 0 0 50px #000;
+          background: #222;
+          z-index: 1000;
+        }
+        .percent .number
+        {
+          position: absolute;
+          top: 0;
+          left:0;
+          width:100%;
+          height:100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+
+        }
+        .percent .number h2
+        {
+          color:#777;
+          font-weight: 700;
+          font-size: 40px;
+          transition: 0.5s;
+
+        }
+        .card:hover .percent .number h2
+        {
+          color:#fff;
+          font-size:60px;
+
+        }
+        .percent .number h2 span
+        {
+          font-size:24px;
+          color:#777;
+        }
+        .card:hover .percent .number h2 span
+        {
+          color:#fff;
+          transition: 0.5s;
+        }
+        .text
+        {
+          position:relative;
+          color:#777;
+          font-weight: 700;
+          font-size:18px;
+          margin-top:20px;
+          letter-spacing: 1px;
+          text-transform: uppercase ;
+          transition: 0.5s;
+        }
+        .card:hover .text
+        {
+          color: #fff;
+        }
+        /* ul{
+          list-style-type: none;
+        }
+        #progressbarhtml{
+            width:40%;
+            margin-bottom: 3%;
+        }
+        #progressbarcss{
+            width:40%;
+            margin-bottom: 3%;
+        }
+        
+        #progressbarjavascript{
+            width:40%;
+            margin-bottom: 3%;
+        }
+        #progressbarjquery{
+            width:40%;
+            margin-bottom: 3%;
+        }
+        #progressbarpython{
+            width:40%;
+            margin-bottom: 3%;
+        }
+        #progressbarjava{
+            width:40%;
+            margin-bottom: 3%;
+        }
+        #progressbarAndroidstudio{
+            width:40%;
+            margin-bottom: 3%;
+        }
+       
+        #skillsbox{
+          margin-top:3%;
+          margin-left:3%;
+          margin-right:3%;
+          margin-bottom:3%
+        } */
+        #logo{
+            width:100px;
+            height:40px;
+        }
+        svg{
+          position:relative;
+          width:150px;
+          height:150px;
+          z-index:1000;
+
+        }
+        svg circle{
+          width:100%;
+          height:100%;
+          fill: none;
+          stroke: #191919;
+          stroke-width: 10;
+          stroke-linecap: round;
+          transform: translate(5px, 5px);
+
+        }
+        svg circle:nth-child(2)
+        {
+          stroke-dasharray: 440;
+          stroke-dashoffset: 440;
+        }
+        .card:nth-child(1) svg circle:nth-child(2)
+        {
+          stroke-dashoffset: 44;
+          stroke: #00ff43;
+        }
+        .card:nth-child(2) svg circle:nth-child(2)
+        {
+          stroke-dashoffset: 101.2;
+          stroke: #800000	;
+        }
+        .card:nth-child(3) svg circle:nth-child(2)
+        {
+          stroke-dashoffset: 140.8;
+          stroke: #808000;
+        }
+        .card:nth-child(4) svg circle:nth-child(2)
+        {
+          stroke-dashoffset: 101.2;
+          stroke: #FFFF00;
+        }
+        .card:nth-child(5) svg circle:nth-child(2)
+        {
+          stroke-dashoffset: 30.8;
+          stroke:#000080;
+        }
+        .card:nth-child(6) svg circle:nth-child(2)
+        {
+          stroke-dashoffset: 92.4;
+          stroke: #C0C0C0;
+        }
+        .card:nth-child(7) svg circle:nth-child(2)
+        {
+          stroke-dashoffset: 149.6;
+          stroke: #800080;
+        }
+        .card:nth-child(8) svg circle:nth-child(2)
+        {
+          stroke-dashoffset: 114.4;
+          stroke:#FF0000;
+        }
+        .card:nth-child(9) svg circle:nth-child(2)
+        {
+          stroke-dashoffset: 101.2;
+          stroke: #808000;
+        }
+        .card:nth-child(10) svg circle:nth-child(2)
+        {
+          stroke-dashoffset: 92.4;
+          stroke: #00ff43;
+        }
+        .card:nth-child(11) svg circle:nth-child(2)
+        {
+          stroke-dashoffset: 114.4;
+          stroke: 	#FF00FF;
+        }
+        .card:nth-child(12) svg circle:nth-child(2)
+        {
+          stroke-dashoffset: 92.4;
+          stroke:#0000FF;
+        }
+        .card:nth-child(13) svg circle:nth-child(2)
+        {
+          stroke-dashoffset: 136.4;
+          stroke:#00FFFF;
+        }
+        .card:nth-child(14) svg circle:nth-child(2)
+        {
+          stroke-dashoffset: 44;
+          stroke:#FF00FF;
+        }
+         /* theme color */
+    body {
+      transition: background 0.4s linear;
+    }
+
+    body.dark {
+      background: #000000;
+
+
+    }
+
+    nav {
+      transition: background 0.4s linear;
+    }
+
+    body.dark nav {
+      background-color: black;
+    }
+
+    footer {
+      transition: background 0.4s linear;
+    }
+
+    body.dark footer {
+      background-color: black;
+    }
+
+    /* body.dark nav a{
+      color:white;
+
+    } */
+    .checkbox {
+      opacity: 0;
+      position: absolute;
+
+    }
+
+    .togglers {
+      margin-top: 5px;
+    }
+
+    .togglers label {
+
+      align-items: center;
+      border-radius: 50px;
+      position: relative;
+      justify-content: space-between;
+      background-color: #111;
+      padding: 5px;
+      display: flex;
+      width: 50px;
+      height: 26px;
+      transform: scale(1.1);
+    }
+
+    .ball {
+      border-radius: 50%;
+      background-color: #fff;
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 22px;
+      height: 22px;
+      transition: transform 0.2s linear;
+
+    }
+
+    .fa-moon {
+      color: #f1c40f;
+    }
+
+    .fa-sun {
+      color: #f39c12;
+    }
+
+    .checkbox:checked+.label .ball {
+      transform: translateX(24px);
+    }
+       
+        </style>
+
+
+</head>
+
+<body>
+     <!-- Navigation -->
+  <section id="nav-bar">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="http://simonzerisenay-com.stackstaging.com/Simon/SimonZerisenayProWebsite.html"><img
+          src="Sizerlogo.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="Home.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Blogs.html">BLOGS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Contacts.html">CONTACTS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="AboutUs.html">ABOUT US</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              READINGS
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="Books.html">BOOKS</a>
+              <a class="dropdown-item" href="Megazine.html">MEGAZINE</a>
+              <a class="dropdown-item" href="Article.html">ARTICLE</a>
+              <a class="dropdown-item" href="Newspaper.html">NEWSAPAPER</a>
+
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              MORE
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="Games.html">GAMES</a>
+              <a class="dropdown-item" href="http://sizer-com.stackstaging.com/Simon/SWE.245/Wforecast.php">WEATHER
+                FORECAST</a>
+              <a class="dropdown-item" href="ReactionTester.html">REACTION TESTER</a>
+              <a class="dropdown-item" href="Videos.html">VIDEOS</a>
+              <a class="dropdown-item" href="http://sizer-com.stackstaging.com/Simon/SWE.245/SQL/">SECRET DIARY</a>
+              <a class="dropdown-item" href="Help.html">HELP</a>
+          <li class="nav-item">
+            <div class="signin">
+              <a href="http://sizer-com.stackstaging.com/Simon/mySQL/SIGNUP/index.php">
+
+                Logout
+
+              </a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="togglers">
+              <input type="checkbox" class="checkbox" id="checkbox">
+              <label for="checkbox" class="label">
+                <!-- <img src="/fontawesome/svgs/regular/sun.svg" alt=""> -->
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="ball"></div>
+              </label>
+
+            </div>
+          </li>
+          <script type="text/javascript">
+            const checkbox = document.getElementById('checkbox');
+            checkbox.addEventListener('change', () => {
+              //change the theme of the website
+              document.body.classList.toggle('dark');
+            })
+          </script>
+      </div>
+      </li>
+
+
+
+
+
+
+
+
+
+
+      </ul>
+
+      </div>
+    </nav>
+  </section>
+    <section>
+        <div class="container">
+            <h1 class="skillset">Simon's Skills</h1>
+            <div style="float: left; margin: 50px;" class="card">
+              <div class="box">
+                <div class="percent">
+                  <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="70" cy="70" r="70"></circle>
+                  </svg>
+                  <div class="number">
+                    <h2>90<span>%</span></h2>
+                  </div>
+                  
+                </div>
+                <h2 class="text">Html</h2>
+              </div>
+            </div>
+            <div style="float: left; margin: 50px;" class="card">
+              <div class="box">
+                <div class="percent">
+                  <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="70" cy="70" r="70"></circle>
+                  </svg>
+                  <div class="number">
+                    <h2>77<span>%</span></h2>
+                  </div>
+                  
+                </div>
+                <h2 class="text">CSS</h2>
+              </div>
+            </div>
+            <div style="float: left; margin: 50px;" class="card">
+              <div class="box">
+                <div class="percent">
+                  <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="70" cy="70" r="70"></circle>
+                  </svg>
+                  <div class="number">
+                    <h2>68<span>%</span></h2>
+                  </div>
+                  
+                </div>
+                <h2 class="text">Javascript</h2>
+              </div>
+            </div>
+            <div style="float: left; margin: 50px;" class="card">
+              <div class="box">
+                <div class="percent">
+                  <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="70" cy="70" r="70"></circle>
+                  </svg>
+                  <div class="number">
+                    <h2>77<span>%</span></h2>
+                  </div>
+                  
+                </div>
+                <h2 class="text">Jquery</h2>
+              </div>
+            </div>
+            <div style="float: left; margin: 50px;" class="card">
+              <div class="box">
+                <div class="percent">
+                  <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="70" cy="70" r="70"></circle>
+                  </svg>
+                  <div class="number">
+                    <h2>93<span>%</span></h2>
+                  </div>
+                  
+                </div>
+                <h2 class="text">Bootstrap</h2>
+              </div>
+            </div>
+            <div style="float: left; margin: 50px;" class="card">
+              <div class="box">
+                <div class="percent">
+                  <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="70" cy="70" r="70"></circle>
+                  </svg>
+                  <div class="number">
+                    <h2>79<span>%</span></h2>
+                  </div>
+                  
+                </div>
+                <h2 class="text">MySQL</h2>
+              </div>
+            </div>
+            <div style="float: left; margin: 50px;" class="card">
+              <div class="box">
+                <div class="percent">
+                  <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="70" cy="70" r="70"></circle>
+                  </svg>
+                  <div class="number">
+                    <h2>66<span>%</span></h2>
+                  </div>
+                  
+                </div>
+                <h2 class="text">Java</h2>
+              </div>
+            </div>
+            <div style="float: left; margin: 50px;" class="card">
+              <div class="box">
+                <div class="percent">
+                  <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="70" cy="70" r="70"></circle>
+                  </svg>
+                  <div class="number">
+                    <h2>74<span>%</span></h2>
+                  </div>
+                  
+                </div>
+                <h2 class="text">Python</h2>
+              </div>
+            </div>
+            <div style="float: left; margin: 50px;" class="card">
+              <div class="box">
+                <div class="percent">
+                  <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="70" cy="70" r="70"></circle>
+                  </svg>
+                  <div class="number">
+                    <h2>77<span>%</span></h2>
+                  </div>
+                  
+                </div>
+                <h2 class="text">Photoshop</h2>
+              </div>
+            </div>
+            <div style="float: left; margin: 50px;" class="card">
+              <div class="box">
+                <div class="percent">
+                  <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="70" cy="70" r="70"></circle>
+                  </svg>
+                  <div class="number">
+                    <h2>79<span>%</span></h2>
+                  </div>
+                  
+                </div>
+                <h2 class="text">Adobe Premier Pro</h2>
+              </div>
+            </div>
+            <div style="float: left; margin: 50px;" class="card">
+              <div class="box">
+                <div class="percent">
+                  <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="70" cy="70" r="70"></circle>
+                  </svg>
+                  <div class="number">
+                    <h2>73<span>%</span></h2>
+                  </div>
+                  
+                </div>
+                <h2 class="text">Android Studio</h2>
+              </div>
+            </div>
+            <div style="float: left; margin: 50px;" class="card">
+              <div class="box">
+                <div class="percent">
+                  <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="70" cy="70" r="70"></circle>
+                  </svg>
+                  <div class="number">
+                    <h2>79<span>%</span></h2>
+                  </div>
+                  
+                </div>
+                <h2 class="text">API's</h2>
+              </div>
+            </div>
+            <div style="float: left; margin: 50px;" class="card">
+              <div class="box">
+                <div class="percent">
+                  <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="70" cy="70" r="70"></circle>
+                  </svg>
+                  <div class="number">
+                    <h2>69<span>%</span></h2>
+                  </div>
+                  
+                </div>
+                <h2 class="text">Php</h2>
+              </div>
+            </div> 
+          </div>
+           
+    
+    
+          <!-- <div class="container">
+          <div id="skillsbox">
+            <div  style="font-weight: bolder;">HTML 5:</div><div id="html" class="progress">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 90%"></div>
+            </div>
+            <br>
+            <p style="font-weight: bolder; background:">CSS:</p><div id="CSS" class="progress">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 70%"></div>
+            </div>
+            <br>
+            <p style="font-weight: bolder;"> Javascript:</p><div id="Javascript" class="progress">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 70%"></div>
+            </div>
+            <br>
+            <p style="font-weight: bolder;">Jquery:</p><div id="jquery" class="progress">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
+            </div>
+            <br>
+            <p style="font-weight: bolder;">Photoshop:</p><div id="Photoshop" class="progress">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 60%"></div>
+            </div>
+            <br>
+            <p style="font-weight: bolder;">SQL:</p><div id="SQL" class="progress">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
+            </div>
+            <br>
+            <p style="font-weight: bolder;">Adobe Premier Pro:</p><div id="Abodepremierphotoshop" class="progress">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
+            </div>
+            <br>
+            <p style="font-weight: bolder;">API:</p><div id="API" class="progress">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 76%"></div>
+            </div>
+            <br>
+            <p style="font-weight: bolder;">Android Studio:</p><div id="AndroidStudio" class="progress">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 85%"></div>
+            </div>
+            <br>
+            <p style="font-weight: bolder;">Photoshop:</p><div id="photoshop" class="progress">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+            </div>
+          </div>
+            
+             -->
+            <!-- <ul>
+                 <li> <div id = "progressbarhtml"></div></li>
+                 <li><div id = "progressbarcss"></div></li>
+                 <li><div id = "progressbarjavascript"></div></li>
+                 <li><div id = "progressbarjquery"></div></li>
+                 <li><div id = "progressbarpython"></div></li>
+                 <li><div id = "progressbarjava"></div></li>
+                 <li><div id = "progressbarAndroidstudio"></div></li>  
+            
+            </ul>
+          </div>
+    
+            <script type="text/javascript">
+            $( function() {
+                $( "#progressbarhtml" ).progressbar({
+                  value: 10
+                });
+              });
+            $( function() {
+                $( "#progressbarcss" ).progressbar({
+                  value: 80
+                });
+              });
+            $( function() {
+                $( "#progressbarjavascript" ).progressbar({
+                  value: 37
+                });
+              });
+            $( function() {
+                $( "#progressbarjquery" ).progressbar({
+                  value: 66
+                });
+              });
+            $( function() {
+                $( "#progressbarpython" ).progressbar({
+                  value: 77
+                });
+              });
+            $( function() {
+                $( "#progressbarjava" ).progressbar({
+                  value: 44
+                });
+              });
+            $( function() {
+                $( "#progressbarAndroidstudio" ).progressbar({
+                  value: 44
+                });
+              });
+               -->
+           
+              <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+              <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+              <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    </section>
+
+</body>
+</html>

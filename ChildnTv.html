@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Simon Zerisenay Online Library</title>
+    <link rel="stylesheet" href="home-style.css">
+    <!-- Bootstrap JS, jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap  CSS CDN  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+    <!-- Font-Awesome cdn -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+      
+          /* theme color */
+    body{
+      transition: background 0.4s linear;
+      background-color: bisque;
+    }
+    body.dark {
+      background: #000000;
+
+
+    }
+    nav{
+      transition: background 0.4s linear;
+    }
+    body.dark nav{
+        background-color: black;
+    }
+    body.dark ul{
+      background-color: black;
+    }
+    li{
+        transition: background 0.4s linear;
+    }
+    body.dark li{
+        color:white;
+    }
+    footer{
+      transition: background 0.4s linear;
+    }
+    body.dark footer{
+      background-color: black;
+    }
+    body.dark p{
+        color: white;
+    }
+    body.dark h4{
+        color: white;
+
+    }
+    body.dark h5{
+        color: white;
+
+    }
+    body.dark h1{
+        color: white;
+    }
+    body.dark h3{
+        color:white;
+    }
+    
+
+  
+    /* body.dark nav a{
+      color:white;
+
+    } */
+    .checkbox{
+      opacity: 0;
+      position: absolute;
+
+    }
+    .togglers{
+      margin-top: 5px;
+    }
+   
+    .togglers label{
+     
+      align-items: center;
+      border-radius: 50px;
+      position: relative;
+      justify-content: space-between; 
+      background-color: #111;
+      padding: 5px;
+      display:flex;
+      width: 50px;
+      height: 26px;
+      transform: scale(1.1);
+    }
+    .ball{ 
+      border-radius: 50%;
+      background-color: #fff;
+      position: absolute;
+      top:2px;
+      left:2px;
+      width: 22px;
+      height: 22px;
+      transition: transform 0.2s linear;
+
+    }
+    .fa-moon{
+      color: #f1c40f;
+    }
+    .fa-sun{
+      color: #f39c12;
+    }
+    .checkbox:checked + .label .ball {
+        transform: translateX(24px);
+    }
+
+        .container h1 {
+            text-align: center;
+            text-decoration: underline;
+            box-shadow: gray;
+        }
+
+        .container h3 {
+            text-align: center;
+            margin-bottom: 3%;
+            text-decoration: underline;
+        }
+        .container h4{
+            text-align: center;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        /* .container h5{
+            text-decoration: underline;
+        } */
+
+        ul.breadcrumb {
+            padding: 10px 16px;
+            list-style: none;
+            background-color: #FFE4C4;
+        }
+
+        ul.breadcrumb li {
+            display: inline;
+            font-size: 18px;
+        }
+
+        ul.breadcrumb li+li:before {
+            padding: 8px;
+            color: black;
+            content: "/\00a0";
+        }
+
+        ul.breadcrumb li a {
+            color: #0275d8;
+            text-decoration: none;
+        }
+
+        ul.breadcrumb li a:hover {
+            color: #01447e;
+            text-decoration: underline;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+   <!-- Navigation -->
+   <section id="nav-bar">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="http://simonzerisenay-com.stackstaging.com/Simon/SimonZerisenayProWebsite.html"><img
+          src="Sizerlogo.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="Home.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Blogs.html">BLOGS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Contacts.html">CONTACTS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="AboutUs.html">ABOUT US</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              READINGS
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="Books.html">BOOKS</a>
+              <a class="dropdown-item" href="Megazine.html">MEGAZINE</a>
+              <a class="dropdown-item" href="Article.html">ARTICLE</a>
+              <a class="dropdown-item" href="Newspaper.html">NEWSAPAPER</a>
+             
+      </div>
+      </li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              MORE
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="Games.html">GAMES</a>
+              <a class="dropdown-item" href="http://sizer-com.stackstaging.com/Simon/SWE.245/Wforecast.php">WEATHER
+                FORECAST</a>
+              <a class="dropdown-item" href="ReactionTester.html">REACTION TESTER</a>
+              <a class="dropdown-item" href="Videos.html">VIDEOS</a>
+              <a class="dropdown-item" href="http://sizer-com.stackstaging.com/Simon/SWE.245/SQL/">SECRET DIARY</a>
+              <a class="dropdown-item" href="Help.html">HELP</a>
+          <li class="nav-item">
+            <div class="signin">
+              <a href="http://sizer-com.stackstaging.com/Simon/mySQL/SIGNUP/index.php">
+
+                Logout
+
+              </a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="togglers">
+              <input type="checkbox" class="checkbox" id="checkbox">
+              <label for="checkbox" class="label">
+                <!-- <img src="/fontawesome/svgs/regular/sun.svg" alt=""> -->
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="ball"></div>
+              </label>
+
+            </div>
+          </li>
+          <script type="text/javascript">
+            const checkbox = document.getElementById('checkbox');
+            checkbox.addEventListener('change', () => {
+              //change the theme of the website
+              document.body.classList.toggle('dark');
+            })
+          </script>
+      </div>
+      </li>
+      
+
+    
+
+
+
+
+
+
+      
+      </ul>
+
+      </div>
+    </nav>
+    <ul class="breadcrumb">
+      <li>More</li>
+      <li><a href="Article.html">Articles</a></li>
+      
+      <li>Children and TV</li>
+    </ul>
+  </section>
+        
+
+   
+    <section>
+        <div class="container">
+
+            <h1 style="font-family: fantasy;">Children and Tv</h1>
+
+
+            <h3>Anne Marie</h3>
+
+            <p>
+                Over the course of the twentieth century, television has come to play a greater role in our daily lives.
+                The
+                variety of programs and channels on offer have increased dramatically while programming for children in
+                particular has undergone considerable growth. Relatively recent reports indicate that children in the US
+                between the ages of two and five watch over thirty hours of television per week on average (McDonough,
+                2009)
+                and average viewing figures for children over two in the UK would seem to be roughly equal (Barkham,
+                2009).
+                Perhaps more worryingly, in the US, children under two spend 1.2 hours a day watching TV.
+                In recent years, a number of organizations and national governments have examined this issue and
+                expressed
+                their concerns on the matter. More specifically, the French government has banned TV aimed at children
+                under
+                three (Haeri & Kelly, 2012) while the Australian government has issued guidelines which advise against
+                exposure to television for children under two (Barkham, 2009). Michelle Obama, the American first lady,
+                has
+                recently joined the debate, recommending that children under two should not be allowed to watch any
+                television and that parents should carefully limit the amount of viewing done by the over-twos (Haeri &
+                Kelly, 2012). Indeed, it seems that children’s television viewing time should be both reduced and
+                carefully
+                monitored, or even eliminated completely in the case of children under two because of the adverse
+                effects it
+                has on children’s behavior, educational development and health.
+            </p>
+            <h5>TV, young children and aggression</h5>
+            <p>
+            
+            Rowell Huesmann et al. (2003) point out that violent television programs are popular with both children and
+            adults because they are more exciting and engaging. They go on to cite research showing that violent TV
+            shows are both cheaper to produce and easier to sell to foreign television networks (Rowell Huesmann et al.,
+            2003). However, this violence can have a lasting negative effect on young children.
+            As Eastman (2004) points out, children tend to copy behaviors that they see either in real life or on
+            television. If they are exposed to examples of violent behavior as part of their television viewing, and
+            particularly, if this violence is not seen to be punished, they are likely to copy this in later life
+            (Eastman, 2004). He further explains that programs that show violence as humorous, for example cartoons, can
+            make the problem bigger because it can make violence appear as fun. Bushman and Rowell Huesmann (2006) also
+            point out that children who are repeatedly exposed to violent television programming, particularly where
+            this violence is carried out by their TV heroes or role models, are likely to see this as normal and to
+            become more aggressive as adults.
+            </p>
+
+
+            <p> When young children are regularly exposed to more extreme violence, contained, for example, in news
+                programs
+                or adult films, they become desensitized and start to see this as normal or natural (Eastman, 2004). The
+                danger here is not just whether they will become violent but even more importantly whether they will
+                tolerate violence unquestionably. As Murray (2005) argues, children may become more willing to tolerate
+                violence in their environment and society in later life without protesting or attempting to change the
+                situation. Clearly then TV violence can have a serious effect on children’s behavior .
+                There are various ways in which we can reduce or eliminate the possible negative effects of television
+                violence on young children without completely eliminating television from their lives. One important
+                step is
+                to limit the amount of television that young pre-school children are allowed to watch, perhaps switching
+                on
+                the TV set for selected programs only (Eastman, 2004). Another way to mitigate the effects of violence
+                is
+                for parents to watch along with their offspring (Eastman, 2004). These solutions not only allow adults
+                to
+                monitor the levels of violence to which children are exposed, but also provide the opportunity to
+                educate
+                children about the unreal nature of television and the concept of acting.
+            </p>
+            <h5>Is TV dumbing down our young?</h5>
+            <p>
+           
+            With regard to educational development, children’s viewing habits seem to have a negative effect on language
+            development especially for very young children. For instance, Anderson and Pempeck (2005) point to a number
+            of studies which seem to indicate that children under two years of age who watch a lot of television have
+            slower language development and learn fewer words. Surprisingly, this is true even where under-twos have
+            been viewing programs designed to promote language development, such as Sesame Street and Dora the Explorer
+            (Anderson and Pempeck, 2005). It may be that these programs are simply too advanced for very young children
+            to benefit from. Another reason could be that in their first two years of life, children are only capable of
+            learning from face-to-face interaction with adults (Barkham, 2009). Once again, this shows a need for
+            television time to be reduced especially for these age groups, or at least for parents to be present and
+            interact with their children in order to eliminate the adverse effects of television.
+            </p>
+
+
+            <h5>The role of TV in the obesity epidemic</h5>
+            <p>  There would seem to be a clear link between increased time watching television and obesity in children
+                (Dietz and Gortmaker, 1985; Swinburn and Shelly, 2008). This link may be due to three factors. First of all,
+                increased television viewing can lead to increased food intake due to snacking. Interestingly, some studies
+                have found that other activities involving electronic screens, such as internet surfing and video games, are
+                not associated with obesity (Swinburn and Shelly, 2008), perhaps because these activities engage the hands
+                in a way that television does not, making snacking less likely. Secondly, advertisements shown during
+                children’s programs make the issue of snacking worse. As Dietz and Gortmaker (1984) explain, TV programs
+                often promote food products, most of the time unhealthy food, and the programs themselves often include
+                mentions of food. This may well encourage children to snack more while they watch. Finally, another related
+                problem is the lack of physical activity due to watching television. Indeed, as children spend longer and
+                longer watching television, they have less time to take part in play or sports activities which might allow
+                them to burn off calories (Dietz and Gortmaker, 1985).
+            </p>
+           
+
+            <h5>TV – helping the young to a more positive view of the world?</h5>
+            <p> It is often argued that TV can have a positive effect on how young people see the world around them. Moeller
+                (1996) discusses research which seems to indicate that television can affect our beliefs, attitudes and
+                values. In her words, “television cultivates a common outlook or world view among its viewers” (p.4). As a
+                result of seeing certain events on television, either positive or negative, people, both young and old, may
+                tend to believe that these events are more “normal” (p.3). A further interesting theory is that certain
+                high-quality television programs can have a far greater effect on attitudes and beliefs, possibly undoing
+                some of the damage done by other programs. An example would be The Cosby Show, which shows a family of
+                middle-class, sophisticated African Americans going about their daily lives and may counteract the negative
+                images of black Americans which are shown in other television programs (Moeller, 1996).This view appears
+                convincing at first. However, it should be pointed out that this depends very much on the
+                type of program children are watching. As mentioned above, programs with violent content may be both more
+                popular with children and cheaper to produce (Rowell Huesmann et al., 2003) which explains to some extent
+                why they are increasingly common on television. This means that the high-quality programs are not the rule
+                but the exception and, as a result, children are usually exposed to programs that can affect their behavior
+                negatively. Overall, there seems to be a need for adult supervision of what children watch if they are to be
+                exposed to the type of content which will bring about beneficial effects.</p>
+                <h5>TV linked to better language and literacy?</h5>
+            <p>
+           
+            Many people are of the opinion that TV can have a positive effect on children’s literacy and language
+            development. Indeed, a number of studies show that when children over the age of two watch well-designed
+            educational shows such as Sesame Street, there is a positive effect on their language development (Anderson
+            and Pempeck, 2005).
+            This argument fails to consider the fact that the majority of TV programs are not designed with language
+            development in mind. For this reason, adults should monitor to make sure that children over two watch
+            programs that improve their language and avoid less appropriate content. Moreover, the presence of an adult,
+            even when the program is educational and potentially beneficial, can increase its effect. For instance,
+            Moeller (1996) points to a number of studies which show that adult co-viewers can have a considerable effect
+            on how much children learn from educational programs. She indicates that the interaction between an adult
+            and a child while watching educational television may be the most important factor in promoting development.
+            It would seem, then, that the presence and active participation of an adult or carer is key if television
+            viewing is to have a positive influence on children.
+            </p>
+
+            <h5> Conclusion</h5>
+            <p>To sum up, television has become an increasingly pervasive presence in our lives. Not only has choice
+                expanded dramatically for the adult viewer, but also for young children, whose extended periods of time
+                spent in front of the screen is causing considerable concern. This essay has argued that there is an
+                urgent
+                need for this viewing time to be radically reduced and for parents to be aware what their children are
+                watching. It has been further argued that TV viewing should be eliminated altogether for children under
+                two
+                years of age. Although some might claim that there are behavioral, educational and attitudinal benefits
+                which television might offer, it is clear that unrestricted viewing can have a negative effect. Indeed,
+                as
+                previously discussed, over-exposure to television may well have seriously detrimental effects on the
+                behavior, educational achievement and health of children. All evidence would indicate that television is
+                here to stay. While it is clear that further research is required to fully assess its potentially
+                harmful
+                impact on the very young, there would already appear to be considerable evidence that parents, educators
+                and
+                possibly national governments need to closely examine the way our children use television if the
+                negative
+                effects are to be eliminated.</p>
+
+
+
+            <h4> References</h4>
+
+
+            <p>
+                Anderson, D.R. & Pempek, T.A., (2005). Television and Very Young Children. The American Behavioural
+                Psychologist, 48(5), 505 – 576. DOI: 10.1177/0002764204271506
+                Barkham, P. (2009, October 14th). Television – not in front of the children? The Guardian. Retrieved
+                September 15th, 2013 from http://www.theguardian.com/society/2009/oct/14/tv-children-harmful-effects
+            </p>
+
+            <p>
+                Bushman, B.J. & Rowell Huesmann, L. (2006). Short-term and Long-term Effects of Violent Media on
+                Aggression
+                in Children and Adults. Arch Pediatr Adolesc Med, 160. Retrieved September 15th, 2013 from
+                http://www-personal.umich.edu/~bbushman/BH06.pdf
+            </p>
+
+            <p>
+                Dietz, W.H. (2001). The obesity epidemic in young children. BMJ 322(7282), 313-314. Retrieved September
+                15th, 2013, from http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1119564/
+            </p>
+
+            <p>
+
+                Dietz, W.H. & Gortmaker, S.L., (1985). Do We Fatten Our Children at the Television Set? Obesity and
+                Television Viewing in Children and Adolescents. Pediatrics, 75(5), 809 – 812. Retrieved September 15th,
+                2013, from http://corcom130-sp10-advertising.wikispaces.umb.edu/file/view/Pediatrics+May+1985.pdf
+            </p>
+
+            <p>
+
+                Eastman, W. (2004). Beginnings and Beyond: The Relationship Between Television Violence and
+                Neurodevelopment
+                of Young Children. College Quarterly, 7(3). Retrieved September 15th, 2012 from
+                http://www.senecac.on.ca/quarterly/2004-vol07-num03-summer/eastman.html
+            </p>
+
+            <p>
+                Haeri, S. & Spencer, K. (2012). Warning to cut TV for young children. BBC NEWS. Retrieved September
+                15th,
+                2013 from http://news.bbc.co.uk/2/hi/programmes/click_online/9768896.stm
+
+            </p>
+            <p>
+                Mares, M. & Woodward, E. (2005). Positive Effects of Television on Children’s Social Interactions: A
+                Meta-Analysis, MEDIA PSYCHOLOGY, 7, 301 – 322. DOI:10.1207/S1532785XMEP0703_4
+
+            </p>
+            <p>
+
+                McDonough, P. (2009). TV VIEWING AMONG KIDS AT AN EIGHT-YEAR HIGH. Retrieved September 15th, 2013 from
+                http://www.nielsen.com/us/en/newswire/2009/tv-viewing-among-kids-at-an-eight-year-high.html
+
+            </p>
+
+            <p>
+                Moeller, B. (1996). Learning from Television: A Research Review. Centre for Children & Technology
+                Reports,
+                11. Retrieved September 19th, 2013 from http://www.dcmp.org/caai/nadh175.pdf
+            </p>
+            <p>
+                Murray, J.P. (2001). TV Violence and Brainmapping in Children. Psychiatric Times, XVII(10). Retrieved
+                September 15th, 2013 from http://www.psychiatrictimes.com/articles/tv-violence-and-brainmapping-children
+            </p>
+
+            <p>
+                Rowell Huesmann, L., Moise-Titus, J., Podolski, C. & Eron, L.D. (2003). Longtitudinal Relations Between
+                Children’s Exposure to TV Violence and Their Aggressive and Violent Behaviour in Young Adulthood:
+                1977-1992.
+                Developmental Psychology 39(2), 201-221. DOI: 10.1037/0012-1649.39.2.201
+            </p>
+            <p>
+                Swinburn, B. & Shelly, A. (2008). Effects of TV time and other sedentary pursuits. International Journal
+                of
+                Obesity, 32, 132 – 136. Retrieved September 15th, 2013, from http://hdl.handle.net/10536/DRO/DU:30017558
+            </p>
+
+            <br>
+            <br><br><br>
+
+
+
+
+
+
+        </div>
+    </section>
+    <footer>
+        <div class="main-content">
+          <div class="left box">
+            <h2>About us</h2>
+            <div class="content">
+              <p>
+                This online library as well as bookstore is created to satisfy the reading lust of all people especially
+              readers in an easy and fun way. Moreover, you can buy books, articles, magazines as well as newspapers of
+              different types published from all over the world. Our motive is to build a reading community with creative
+              mind, prudent way of thinking, Positive and learning mindsets.
+              </p>
+              <div class="social">
+                <a href="#"><span class="fab fa-facebook-f"></span></a>
+                <a href="#"><span class="fab fa-twitter"></span></a>
+                <a href="#"><span class="fab fa-instagram"></span></a>
+                <a href="#"><span class="fab fa-youtube"></span></a>
+                <a href="#"><span class="fab fa-linkedin"></span></a>
+                <a href="#"><span class="fab fa-pinterest"></span></a>
+              </div>
+            
+            </div>
+          </div>
+          <div class="center box">
+            <h2>Address</h2>
+            <div class="content">
+              <div class="place">
+                <a href="https://goo.gl/maps/6Q4XGAHgLy64LvAj9"><span class="fas fa-map-marker-alt"></span></a>
+                <span class="text"> United Arab Emirates, Abu Dhabi</span>
+              </div>
+              <div class="phone">
+                <span class="fas fa-phone-alt"></span>
+                <span class="text">+971-545-305-388</span>
+              </div>
+              <div class="email">
+                <span class="fas fa-envelope"></span>
+                <span class="text">simonzerisenay@gmail.com</span>
+              </div>
+            </div>
+    
+          </div>
+          <div class="right box">
+            <h2> Contact us</h2>
+            <div class="content">
+              <form action="#">
+                <div class="email">
+                  <div class="text">Email *</div>
+                  <input type="email" required>
+                </div>
+                <div class="msg">
+                  <div class="text"> Message *</div>
+                  <textarea cols="25" rows="2" required></textarea>
+    
+                </div>
+                <div class="btn">
+                  <button class="Sbtn" type="submit">Send</button>
+                </div>
+    
+              </form>
+    
+            </div>
+    
+          </div>
+          
+       
+    
+    
+        </div>
+     
+    
+        
+      </footer>
+</body>
+
+</html>
