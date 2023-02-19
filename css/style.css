@@ -65,7 +65,6 @@ html, body {
 	color: #00FF5C;
 	font-weight: 700;
 }
-
 .head .selected:after {
 	position: absolute;
 	content: "";
